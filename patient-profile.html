@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Patient Profile</title>
+	<meta charset="utf-8">
+    <meta name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Codeply">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/animate.min.css" />
+    <link rel="stylesheet" href="./css/ionicons.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <style type="text/css">
+    	.container {
+    		margin-top: 100px;
+    	}
+    </style>
+</head>
+<body>
+	<nav id="topNav" class="navbar navbar-default-novid navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-collapse collapse" id="bs-navbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a id="navtext-main" class="navbar-brand-novid page-scroll" href="./index.html">PARK</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a id="navtext" class="page-scroll" href="./index.html">LOGOUT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+    	<div class="row">
+    		<div class = "col-md-8 col-md-offset-2" style="text-align: center;">
+    			<h1><b><u>RECENT PREFORMANCE</u></b></h1>
+    		</div>
+		</div>
+		<div class="row">
+			<div class = "col-md-4 col-md-offset-2">
+    			<button type="button" class="btn btn-warning btn-lg">COMPLETE HISTORY</button>
+    		</div>
+    		<div class = "col-md-4 col-md-offset-1">
+    			<button type="button" class="btn btn-success btn-lg">TAKE NEW MEASUREMENT</button>
+    		</div>
+    	</div>
+    	<div class="row">
+    		<div class = "col-md-8 col-md-offset-2" style="text-align: center;">
+    			<h1><b><u>MEDICATION</u></b></h1>
+    		</div>
+    		<div class = "col-md-8 col-md-offset-2">
+    			<div class="form-group">
+					<h3>Which of the following have you taken recently?<h3>
+					<div class="checkbox">
+						<label><input type="checkbox" value="">RX #1</label>
+					</div>
+					<div class="checkbox">
+						<label><input type="checkbox" value="">RX #2<label>
+					</div>
+					<div class="checkbox disabled">
+						<label><input type="checkbox" value="">RX #3</label>
+					</div>
+					<button type="button" class="btn btn-success btn-lg">SUBMIT</button>
+				</div>
+    		</div>
+		</div>
+    </div>
+</body>
+</html>

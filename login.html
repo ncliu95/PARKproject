@@ -6,48 +6,44 @@
 	<meta name="description" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Codeply">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/animate.min.css" />
     <link rel="stylesheet" href="./css/ionicons.min.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <style type="text/css">
-    	#boxholder {
-    		display: flex;
-    		height: 100%;
-    	}
-    	.patients {
-    		background: #f2f2f2;    		
-    		width: 50%;
-    		height: 100%;
-    		align-content: center;
-    		text-align: center;
-    	}
-    	.doctors {
-    		background: #f2f2f2;
-    		width: 50%;
-    		height: 100%;
-    		align-content: center;
-    		text-align: center;
-    	}
-    	#patients-link {
-    		background: lightblue;
-    		margin: 150px auto;
-    		width: 400px;
-    		height: 60%;
-    		border-style: solid;
-    		border-width: 2px;
-    	}
-		#doctors-link {
-			background: red;
-			margin: 150px auto;
-			width: 400px;
-			height: 60%;
-			border-style: solid;
-			border-width: 2px;
-		}
+    .img-thumbnail {
+        background-color: transparent;
+        border-color: transparent;
+    }
+    #patients-link {
+        align-content: center;
+        text-align: center;
+        background: lightblue;
 
+        border-style: solid;
+        border-width: 2px;
+    }
+    #doctors-link {
+        align-content: center;
+        text-align: center;
+        background: red;
 
-    </style>
+        border-style: solid;
+        border-width: 2px;
+    }
+    .btn-default {
+        background: transparent;
+        color: black;
+    }
+</style>
 </head>
 <body>
 	<nav id="topNav" class="navbar navbar-default-novid navbar-fixed-top">
@@ -69,32 +65,89 @@
             </div>
         </div>
     </nav>
-	<!--<div id="boxholder">
-		<div id="patients">
-			<div id="patients-link">
-				<h1>PATIENTS</h1>
-                <img src="./img/redcross.png" class="img-responsive">
-			</div>
-		</div>
-		<div id="doctors">
-			<div id="doctors-link">
-				<h1>DOCTORS</h1>
-                <img src="./img/stethoscope.png" class="img-response">   
-			</div>
-		</div>
-	</div>-->
     <div class="constainer" style="margin-top: 100px">
+        <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-2"><h1 style="text-align: center">LOGIN</h1></div>
+            <div class="col-md-5"></div>
+        </div>
+        <br><br>
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-3">
-                <img src="./img/redcross.png" class="img-responsive">
+                <div id="patients-link">
+                    <br>
+                    <button type="button" class="btn-default btn-block btn-lg" data-toggle="modal" data-target="#patientModal">PATIENT LOGIN</button>
+                    <img src="./img/redcross.png" class="img-thumbnail" width="310" height="310">
+                </div>
             </div>
             <div class="col-md-2"></div>
             <div class="col-md-3">
-                <img src="./img/stethoscope.png" class="img-responsive">
+                <div id="doctors-link">
+                    <br>
+                    <button type="button" class="btn-default btn-block btn-lg" data-toggle="modal" data-target="#doctorModal">DOCTOR LOGIN</button>
+                    <img src="./img/stethoscope.png" class="img-thumbnail" width="215">
+                </div>
             </div>
             <div class="col-md-2"></div>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div id="patientModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Patient Login</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>E-mail: </label>
+                        <input type="text" class="form-control">
+                        <label>Password: </label>
+                        <input type="password" class="form-control">
+                        <br>
+                        <button type="submit" class="btn btn-success" onclick="location.href = './patient-profile.html'">Submit</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="doctorModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Doctor Login</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>E-mail: </label>
+                        <input type="text" class="form-control">
+                        <label>Password: </label>
+                        <input type="password" class="form-control">
+                        <br>
+                        <button type="submit" class="btn btn-success" onclick="location.href = './doctor-profile.html'">Submit</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
 </body>
 </html>
