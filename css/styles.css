@@ -645,3 +645,9 @@ video{
 			font-weight: bold;
 			text-align: center;
 }
+
+.btn-xl {
+    padding: 10px 20px;
+    font-size: 25px;
+    border-radius: 10px;
+}
