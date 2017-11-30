@@ -96,6 +96,9 @@ $DBcon->close();
 				<img src="<?php echo $path3; ?>" class="img-responsive">
 			</div>
 		</div>
+        <div class="col-md-offset-4 col-md-4" style="text-align: center;">
+            <h3><b>SEVERITY SCORE: 0</b></h3>
+        </div>
 		<br><br><br>
 		<div class="row">
 			<div class = "col-md-3 col-md-offset-3">

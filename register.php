@@ -258,7 +258,7 @@ if(isset($_POST['phy-btn-signup'])) {
                     <form class="form-group" method="POST">
                         <div class="col-md-6">
                             <label>First Name: </label>
-                            <input type="text" class="form-control" name="phy-lastname">
+                            <input type="text" class="form-control" name="phy-firstname">
                         </div>
                         <div class="col-md-6">
                             <label>Last Name: </label>

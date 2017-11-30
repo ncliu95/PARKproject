@@ -17,7 +17,7 @@ $DBcon->close();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Welcome, <?php echo $userRow['first_name']; ?>!</title>
+	<title>Welcome, <?php echo $userRow['first_name'];?>!</title>
 	<meta charset="utf-8">
 	<meta name="description" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -234,7 +234,8 @@ $DBcon->close();
 	<div class="row">
 		<div class="col-md-offset-3 col-md-4">
 			<h2>Recent Preformance</h2>
-			<img src="./img/doctorgraphplaceholder.jpg" class="img-responsive">
+			<img src="./img/1/fingertip/20181130.jpg" class="img-responsive">
+			<h3>SEVERITY SCORE: 0</h3>
 			<br>
 			<button type="button" class="btn btn-warning btn-lg">COMPLETE HISTORY</button>
 
