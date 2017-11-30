@@ -157,6 +157,11 @@ if(isset($_POST['phy-btn-signup'])) {
         </div>
     </nav>
     <div class="constainer" style="margin-top: 100px">
+         <?php
+            if(isset($msg)){
+                echo $msg;
+            }
+        ?>
         <div class="row">
             <div class="col-md-5"></div>
             <div class="col-md-2"><h1 style="text-align: center">REGISTRATION</h1></div>
