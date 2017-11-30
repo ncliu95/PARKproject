@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PARK</title>
+    <meta name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Codeply">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/animate.min.css" />
+    <link rel="stylesheet" href="./css/ionicons.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <nav id="topNav" class="navbar navbar-default-novid navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-collapse collapse" id="bs-navbar">
+                <ul class="nav navbar-nav">
+                	<li>
+                		<a id="navtext-main" class="navbar-brand-novid page-scroll" href="https://www.machinteraction.com/parkinsons/index.html">PARK</a>
+                	</li>
+                    <li>
+                        <a id="navtext" class="page-scroll" href="#footer">Contact</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a id="navtext" class="page-scroll" href="https://www.machinteraction.com/parkinsons/info.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header id="first">
+    <section>
+        <div class="container">
+            <div class="row">
+            	<div class="col-md-8 col-md-offset-2 text-faded">
+					<div id="tasks">
+						<div class="progress center-block" style="width:640px;">
+							<div class="progress-bar" role="progressbar" aria-valuenow="86"
+							aria-valuemin="0" aria-valuemax="100" style="width:86%;">86%</div>
+						</div>
+						
+						<div class="well">
+						<div id="tasks-container">
+								<div id="retake-1-container">
+									<div id="retake-container">
+										<h2>Use the video and finish, or retake the video?</h2>
+									</div>
+									
+									<div class="buttons" style="margin-top:40px">
+										<input type="button" style="margin-right: 20px;" class="btn yes-btn btn-xl" 
+										value="Continue" id="continue_button" onclick="nextTask()"/>
+						
+										<input type="button" class="btn btn-default btn-xl" 
+										value="Retake" id="retake_button" onclick="retake()"/>
+									</div>
+									
+									<h3 style="margin-top: 60px;">(Press <span style="font-weight:bold;">backspace</span> to return, or the <span style="font-weight:bold;">space bar</span> to continue)</h3>
+								</div>
+								
+							
+						</div><!--tasks container-->
+						</div>
+						
+						
+					</div><!--tasks-->
+				</div>
+            </div>
+        </div>
+    </section>
+    </header>
+
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="row">
+               
+                <div class="col-xs-6 col-sm-3 column">
+                    <h4>About</h4>
+                    <ul class="list-unstyled">
+                        <li>Contact Us</li>
+                        <li><a href="mailto:parktoolhelp@gmail.com">parktoolhelp@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3 column">
+                    <h4>Stay Posted for Future Updates</h4>
+                    <iframe name="inv" style="display:none;"></iframe>
+                    <form id="subscribe-form" action="submit_email_updates.php" method="post" target="inv">
+                        <div class="form-group">
+                          <input type="text" id="email-text" name="email" class="form-control" placeholder="Tell us your email">
+                        </div>
+                    </form>
+                    <p id="email-invalid" style="color:red; display:none;">Error: invalid email</p>
+                    <div class="form-group">
+                          <button class="btn btn-default" onclick="submitEmailUpdates()" type="button">Subscribe for updates</button>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3 text-right" style="margin-left:200px;margin-top:10px;">
+                    <ul class="list-inline">
+                      <li><a rel="nofollow" href="https://www.machinteraction.com/parkinsons/info.html"><img width="150" src="./img/rochci.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <br/>
+        </div>
+    </footer>
+    <div id="alertModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+        	<div class="modal-body">
+        		<h2 class="text-center">Thank you!</h2>
+        		<p class="text-center">Your email has been recorded.</p>
+        		<p class="text-center">For future updates on this project, you will be notified.</p>
+        		
+        		<br/>
+        		<button class="btn btn-primary-second btn-lg center-block" data-dismiss="modal" aria-hidden="true">OK <i class="ion-android-close"></i></button>
+        	</div>
+        </div>
+        </div>
+    </div>
+    <!--scripts loaded here -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.easing.min.js"></script>
+    <script src="./js/wow.js"></script>
+    <script src="./js/scripts.js"></script>
+    
+    <script>
+	function submitEmailUpdates(){
+		if($('#email-text').val().length > 0){
+			var re = /\S+@\S+\.\S+/;
+			if(re.test($('#email-text').val()) == true){
+				$('#email-invalid').css('display', 'none');
+				$('#subscribe-form').submit();
+				$('#alertModal').modal('show');
+				$('#email-text').val('');
+			}
+			else{
+				$('#email-invalid').css('display', 'inline-block');
+			}
+		}
+	}
+    </script>
+    <script>
+
+	function nextTask(){
+	
+		jQuery(function($) {
+		var current = sessionStorage.getItem('currentTask');
+		
+		if(current === 'task1'){
+			window.location.href = "task1-part2.html";
+		}
+		else if(current === 'task1p2'){
+			window.location.href = "task2.html";
+		}
+		else if(current === 'task2'){
+			window.location.href = "task3.html";
+		}
+		else if(current === 'task3'){
+			window.location.href = "task4.html";
+		}
+		else if(current === 'task4'){
+			window.location.href = "task5.html";
+		}
+		else if(current === 'task5'){
+			window.location.href = "task6.html";
+		}
+		else if(current === 'task6'){
+			window.location.href = "../patient-profile.php";
+		}
+
+		});
+	}
+
+	function retake(){
+	
+		jQuery(function($) {
+			var current = sessionStorage.getItem('currentTask');
+			if(current === 'task1'){
+				window.location.href = "task1.html";
+			}
+			else if(current === 'task1p2'){
+				window.location.href = "task1-part2.html";
+			}
+			else if(current === 'task2'){
+				window.location.href = "task2.html";
+			}
+			else if(current === 'task3'){
+				window.location.href = "task3.html";
+			}
+			else if(current === 'task4'){
+				window.location.href = "task4.html";
+			}
+			else if(current === 'task5'){
+				window.location.href = "task5.html";
+			}
+			else if(current === 'task6'){
+				window.location.href = "task6.html";
+			}
+
+			});
+		}
+
+		var cont = document.getElementById("continue_button");
+		var re = document.getElementById("retake_button");
+
+		window.onkeydown = function(e){
+		if(e.keyCode === 32){
+			e.preventDefault();
+			cont.click();
+		}
+		else if(e.keyCode === 8 || e.keyCode === 46){
+			e.preventDefault();
+			re.click();
+		}
+		};
+
+	</script>
+    
+    <script>
+        var chromeMediaSource = 'screen';
+        window.addEventListener('message', function(message) {
+            if(message.origin != 'https://www.webrtc-experiment.com') return;
+            chromeMediaSource = 'desktop';
+            if(typeof getScreenId == 'function' && !!message.data.sourceId) {
+                getScreenId(chromeMediaSource, message.data.sourceId);
+            }
+        });
+    </script>
+    
+
+  </body>
+</html>

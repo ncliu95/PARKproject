@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PARK</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Codeply">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/animate.min.css" />
+    <link rel="stylesheet" href="./css/ionicons.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script>
+		function setID(){
+		var userID = '';
+		var ran = Math.floor(Math.random()*(100+1));
+		var ranString = ran.toString();
+		userID = (new Date).toISOString().replace(/:|\./g, '-') + ranString;
+		sessionStorage.setItem('userID', userID);
+		document.getElementById("myform").myID.value = userID;
+		}
+	</script>
+  </head>
+  <body onload="getEmail()">
+    <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#first">PARK</a>
+            </div>
+            <div class="navbar-collapse collapse" id="bs-navbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="page-scroll" href="#one">Intro</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#footer">Contact</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="https://www.machinteraction.com/parkinsons/info.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header id="first">
+        <div class="header-content">
+            <div class="inner">
+                <h1 >Parkinson's Analysis</h1>
+                <h4>with Remotely-Accessed Knowledge</h4>
+                <hr>
+                <!-- <a href="#video-background" id="toggleVideo" data-toggle="collapse" class="btn btn-primary btn-xl">Toggle Video</a> &nbsp; --> 
+				<a href="#one" id="get-started" class="btn yes-btn btn-xl page-scroll">Get Started</a>
+            </div>
+        </div>
+        <!--<video autoplay="" loop="" class="fillWidth fadeIn wow collapse in" data-wow-delay="0.5s" poster="https://s3-us-west-2.amazonaws.com/coverr/poster/Traffic-blurred2.jpg" id="video-background">
+            <source src="./assets/tapping.mp4" type="video/mp4">Your browser does not support the video tag. I suggest you upgrade your browser.
+        </video>-->
+        <iframe class="fillWidth fadeIn wow collapse in" data-wow-delay="0.5s" id="video-background" poster=""
+        	src="https://www.youtube.com/embed/oSwJb4wn5-M?modestbranding=1&autohide=1&showinfo=0&controls=0&rel=0&enablejsapi=1" frameborder="0">
+		</iframe>
+    </header>
+    <section class="bg-primary" id="one">
+        <div class="container">
+            <div class="row">
+            <!--<div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2">-->
+                <div class="col-md-12">
+                    <div id="consent_content" class="text-faded">
+                    
+                    	<h2 class="text-center"><span style="font-weight:bold;">Electronic Consent Form<span></h2>
+                    	<p style="margin:20px;"></p>
+						<p class="text-center"><span style="font-weight:bold;">Remote data collection to objectively quantify the severity of Parkinson's disease.</span></p>
+						<p style="margin:40px;"></p>
+						<a href="img/Parkinsons_Consent_Form.pdf" id="dwnld" download><span style="font-weight:bold; font-size:20px;">Click here to download the consent form.</span></a>
+						<p style="margin:20px;"></p>
+						<p><span style="font-weight:bold;">Please click the "Yes" button to enroll in the study. If you choose not to 
+									participate, there will be no penalty to you. A blank copy of this consent form can 
+									be downloaded from this attachment for your review prior to providing consent. 
+								Please keep this copy for your records.</span></p>
+						<p style="margin:10px;"></p>
+						<ul>
+							<li>Being in this study is voluntary - <span style="text-decoration:underline;">it is your choice.</span></li>
+							<li>You can change your mind and <span style="text-decoration:underline;">stop at any time.</span></li>
+							<li>If you choose not to take part, your [routine medical care, employment status, 
+									educational status, etc.] will not be changed in any way.</li>
+							<li>There are risks from participating and you should understand what these mean to you.</li>
+						</ul>
+						<p style="margin:20px;"></p>
+								
+						<form id="myform" action="submit_consent.php" method="post" style="font-size:18px; display:none;">
+							<input type="radio" name="consent2" value="yes"><br>
+							<input type="radio" name="consent2" value="no"><br>
+							<input type="hidden" name="myID" value="">
+						</form>
+						<p style="margin:50px;"></p>
+								
+						<div class="col-md-8">
+							<h3>Do you agree to participate in this study?</h3>
+							<p>You may revoke your consent at any time.</p>
+							<p style="margin:40px;"></p>
+						</div>
+						<div class="col-md-4">
+							<button id="agree_button" class="btn btn-xl btn-border yes-btn" onclick="agree()" style="margin-right:20px;">I agree</button>
+							<button id="disagree_button" class="btn btn-default btn-xl btn-border" onclick="disagree()">I disagree</button>
+							<p style="margin:80px;"></p>
+						</div>
+						<div class="text-center">
+							<p>Click the tab to expand: </p>
+						</div>
+						<div class="panel-group" id="accordion">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapse1"><span style="font-weight:bold;">Investigators</span></a>
+									</h3>
+								</div>
+								<div id="collapse1" class="panel-collapse collapse">
+									<div class="panel-body">
+										<div class="col-md-4">
+											<p><span style="font-weight:bold;">Principal Investigator</span></p>
+										</div>
+										<div class="col-md-7">
+											<p>Dr. M. Ehsan Hoque</p>
+											<p>Assistant Professor, Department of Computer Science, University of Rochester, 
+											<a href="mailto:mehoque@cs.rochester.edu">mehoque@cs.rochester.edu</a></p>
+										</div>
+										<div class="col-md-4">
+											<p style="margin:10px;"></p>
+											<p><span style="font-weight:bold;">Co-Investigator</span></p>
+										</div>
+										<div class="col-md-7">
+											<p style="margin:10px;"></p>
+											<p>Ray Dorsey, MD, MBA</p>
+											<p>University of Rochester, Center for Human Experimental Therapeutics, 
+														Saunders Research Building, 2nd Floor, 585.276.6824</p>
+										</div>
+										<div class="col-md-4">
+											<p style="margin:10px;"></p>
+											<p><span style="font-weight:bold;">Research Coordinator</span></p>
+										</div>
+										<div class="col-md-7">
+											<p style="margin:10px;"></p>
+											<p>Mohammad Rafayet Ali</p>
+											<p>Ph.D. Student, Department of Computer Science, University of Rochester, 
+											<a href="mailto:mali7@cs.rochester.edu">mali7@cs.rochester.edu</a>, 585.520.8113</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><span style="font-weight:bold;">Introduction</span></a>
+									</h3>
+								</div>
+								<div id="collapse2" class="panel-collapse collapse">
+									<div class="panel-body">
+												
+										<p>We are inviting you to take part in this study because you have expressed interest in 
+									participating in research studies of Parkinson disease (PD). We are interested in enrolling 
+									both individuals with Parkinson disease and individuals not diagnosed with Parkinson 
+									disease. We would like to study whether the use of web-based technology can measure 
+									day-to-day fluctuations in symptoms of Parkinson disease, and distinguish these 
+									individuals from individuals who do not have Parkinson disease. This study is being 
+									conducted by Dr. Ehsan Hoque and Dr. Ray Dorsey of the University of Rochester's 
+									Department of Computer Science and Department of Neurology.</p>
+												
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapse3"><span style="font-weight:bold;">Purpose of Study</span></a>
+									</h3>
+								</div>
+								<div id="collapse3" class="panel-collapse collapse">
+									<div class="panel-body">
+										<p>The clinical data on Parkinson disease are usually recorded during periodic assessment 
+									in the academic research center. These data are low-frequency and are not suitable for 
+									computer aided objective analysis. In this study, we want to explore the possibility of a 
+									web-based application which is able to capture audio and video data from the research 
+									subjects and objectively analyze those generating some feedback (or measure the 
+									severity of the disease). The application will give you the instructions to perform the tasks 
+									by showing them animation. This collected data and the automatic analysis may uncover 
+									key characteristics of the research subjects thus helping the specialist make better 
+									recommendations.</p>
+										<p style="margin:10px;"></p>
+										<p>The specific objectives of the study are as follows:</p>
+										<p style="margin:10px;"></p>
+										<p>Aim 1: To assess the feasibility of research subjects using the web application from their home.</p>
+										<p>Aim 2: Collect high-quality audio and video data from the research subjects’ movement tests.</p>
+										<p>Aim 3: To objectively measure and quantify five factors of Parkinson disease (voice, 
+													postural sway, dexterity, gait, and reaction time) using the application.</p>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapse4"><span style="font-weight:bold;">Description of Study Procedures</span></a>
+									</h3>
+								</div>
+								<div id="collapse4" class="panel-collapse collapse">
+									<div class="panel-body">
+										<p>You are being asked to participate in a research study individuals with self-reported 
+									Parkinson disease and without Parkinson disease.</p>
+										<p>You must have a computer/laptop with a working webcam and Internet. Access to Internet 
+									connection throughout the duration of this study is necessary. Once you consent to join 
+									the study after completing an electronic consent form, you will receive the link to the web-application.</p>
+										<p>Using the web-application you will perform the five tasks once from MDS-UPDRS 
+									(Movement Disorder Society - Unified Parkinson’s Disease Rating Scale). You need to 
+									do the tasks once in one session. However, you can take a break between tasks without 
+									closing the application. These tasks are:</p>
+										<ol>
+											<p style="margin:10px;"></p>
+											<li><span style="font-weight:bold;">Facial Expression Task:</span> you will sit at rest for 10 seconds. A timer on the web 
+									application will allow you to see how much time left. After 10 seconds, you need to 
+									recite the following sentences: "The quick brown fox jumps over the lazy dog. The dog 
+									wakes up and chases the fox into the forest."</li>
+											<li><span style="font-weight:bold;">Finger Tapping:</span> you need to tap the index finger on the thumb 10 times as quickly 
+									and as big as possible. First, you need to do this on right hand and then left hand.</li>
+											<li><span style="font-weight:bold;">Hand Movements:</span> you will make a tight fist with the arm bent at the elbow so that the 
+									palm faces the web interface. You will do this for 10 times as fully and as quickly as 
+									possible.</li>
+											<li><span style="font-weight:bold;">Pronation-supination Movements of Hands:</span> you have to extend the arm out in front 
+									of your body with the palms down; then to turn the palm up and down alternately 10 
+									times as fast and as fully as possible.</li>
+											<li><span style="font-weight:bold;">Postural Tremor of Hands:</span> you have to stretch the arms out in front of the body with 
+									palms down. The wrist should be straight and the fingers comfortably separated so 
+									that they do not touch each other.</li>
+										</ol>
+										<p>Each task should not take more than one minute. You will be able to close the web-application 
+									anytime you want. You will be able to redo a test. Also, the web application 
+									allows you to take rest in between the tasks if you want to. During the tests, the web-application 
+									will collect the audio and video data using the microphone of the computer 
+									and the webcam. After the completion of the tests, the web-application will upload the 
+									data to our secure web server. This web server is password protected and only the study 
+									personnel will have access to this data. After the recording, you will fill out an online 
+									survey. This survey will include questions regarding your experience with the web 
+									application, your feedback, and demographics information.</p>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapse5"><span style="font-weight:bold;">Number of Subjects</span></a>
+									</h3>
+								</div>
+								<div id="collapse5" class="panel-collapse collapse">
+									<div class="panel-body">
+										<p>We aim to enroll approximately 2000 research subjects in this study, 1500 with self-reported 
+									PD and 500 with no PD.</p>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapse6"><span style="font-weight:bold;">Duration of the Study</span></a>
+									</h3>
+								</div>
+								<div id="collapse6" class="panel-collapse collapse">
+									<div class="panel-body">
+										<p>The total time involved for the study visit is at most 10 minutes, including both the motor 
+									tasks and the online survey.</p>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapse7"><span style="font-weight:bold;">Risks of Participation</span></a>
+									</h3>
+								</div>
+								<div id="collapse7" class="panel-collapse collapse">
+									<div class="panel-body">
+										<p>There is minimal risk to you from this research, as no human tissue will be collected, and 
+											no procedures or human testing (beyond surveys and standard clinical assessments) will 
+											occur. Participant risks from participation in this research study are considered minimal 
+											and include breach of confidentiality and privacy of information transmitted using 
+											technology.</p>
+										<p style="margin:10px;"></p>
+										<p>However, protection against these risks is a priority. The research subjects with PD may feel stress. 
+									To minimize this the web application will allow you to stop the application 
+									anytime they want. There is risk involved with your privacy. All data will be securely 
+									transmitted from the web application and de-identified before data analysis. Data 
+									collected from surveys will be transmitted in encrypted form and stored in a secure 
+									database housed at the University of Rochester. All web-based assessments will be 
+									conducted using secure, HIPAA-compliant video-conferencing software to protect your 
+									confidentiality.</p>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapse8"><span style="font-weight:bold;">Benefits of Participation</span></a>
+									</h3>
+								</div>
+								<div id="collapse8" class="panel-collapse collapse">
+									<div class="panel-body">
+										<p>There are no direct benefits; however, the data collected may inform future research and 
+									increase understanding of Parkinson disease (PD).</p>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapse9"><span style="font-weight:bold;">Costs</span></a>
+									</h3>
+								</div>
+								<div id="collapse9" class="panel-collapse collapse">
+									<div class="panel-body">
+										<p>There will be no cost to you to participate in this study. You can withdraw anytime. 
+									Withdrawal will have no effect on your current or future treatment or other benefits.</p>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapse10"><span style="font-weight:bold;">Payments</span></a>
+									</h3>
+								</div>
+								<div id="collapse10" class="panel-collapse collapse">
+									<div class="panel-body">
+										<p>After completing the program (recording and survey) we will ask you whether you want to receive 
+													an Amazon gift card ($50) or not. If you want to have it then we will ask for your email address 
+													where we will send the gift card. We will not pay for the cost associated with the 
+													internet connection.</p>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapse11"><span style="font-weight:bold;">Confidentiality of Records</span></a>
+									</h3>
+								</div>
+								<div id="collapse11" class="panel-collapse collapse">
+									<div class="panel-body">
+										<p>The University of Rochester makes every effort to keep the information collected from 
+									you. In order to do so, we will store the data in password protected lab machines. All the 
+									data will be de-identified by replacing the names with an ID number. The videos will be 
+									transferred from the web application to the server using a secure web transfer protocol. 
+									The server is password protected and only the research staff has access to it. We will not 
+									keep the videos which include your face or any object that can identify you. Your 
+									information will not be included in any Electronic Medical Report (EMR). Sometimes, 
+									however, researchers need to share information that may identify you with people that 
+									work for the University, regulators or the study sponsor. If this does happen we will take 
+									precautions to protect the information you have provided. Results of the research may 
+									be presented at meetings or in publications, but your name will not be used.</p>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapse12"><span style="font-weight:bold;">Contact Persons</span></a>
+									</h3>
+								</div>
+								<div id="collapse12" class="panel-collapse collapse">
+									<div class="panel-body">
+										<p>For more information concerning this research or if you feel that your participation has 
+											resulted in any research related injury, emotional or physical discomfort please contact: 
+											Mohammad Rafayet Ali (research coordinator) at 585-520-8113 
+											(Email: <a href="mailto:mali7@cs.rochester.edu">mali7@cs.rochester.edu</a>)</p>
+										<p style="margin:10px;"></p>
+										<p>Please contact the University of Rochester Research Subjects Review Board at 265 
+											Crittenden Blvd., CU 420628, Rochester, NY 14642, Telephone (585) 276-0005 or (877) 
+											449-4441 for the following reasons:</p>
+										<ul>
+											<li>You wish to talk to someone other than the research staff about your rights as 
+												a research subject;</li>
+											<li>To voice concerns about the research;</li>
+											<li>To provide input concerning the research process;</li>
+											<li>In the event, the study staff could not be reached.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapse13"><span style="font-weight:bold;">Voluntary Participation</span></a>
+									</h3>
+								</div>
+								<div id="collapse13" class="panel-collapse collapse">
+									<div class="panel-body">
+										<p>Taking part in this study is voluntary. You are free not to take part or to withdraw at any 
+									time, for whatever reason. No matter what decision you make, there will be no penalty or 
+									loss of benefit to which you are entitled. In the event that you withdraw yourself from this 
+									study, the information you have already provided will be kept in a confidential manner.</p>
+									</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapse14"><span style="font-weight:bold;">Permission</span></a>
+									</h3>
+								</div>
+								<div id="collapse14" class="panel-collapse collapse">
+									<div class="panel-body">
+										<p>I have read the contents of this consent form and have been encouraged to ask questions. 
+									I have received answers to my questions. I agree to participate in this study. By selecting 
+									"Yes" in both of the questions above, I acknowledge that I have provided my electronic 
+									consent to join this research study. I have had the opportunity to download a blank copy 
+									of this form (in PDF format) for my review prior to providing consent. This blank copy can 
+									be kept for my personal records.</p>
+									</div>
+								</div>
+							</div>
+							</div><!--panel group-->
+										
+                    
+                    </div>
+                    <div id="downloadChrome" style="display:none;" class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 text-center">
+						<a href="#first" class="btn btn-default btn-xl btn-border page-scroll">Watch Video <i class="ion-android-arrow-up"></i></a>
+						<p style="margin-top:100px"></p>
+						<h3><a href="https://www.google.com/chrome/browser/" target="_blank"><span style="font-weight:bold;">Click here to download Google Chrome.</span></a></h3>
+						<p class="text-faded">You must use Google Chrome to visit this site.</p>
+					</div>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="row">
+               
+                <div class="col-xs-6 col-sm-3 column">
+                    <h4>About</h4>
+                    <ul class="list-unstyled">
+                        <li>Contact Us</li>
+                        <li><a href="mailto:parktoolhelp@gmail.com">parktoolhelp@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3 column">
+                    <h4>Stay Posted for Future Updates</h4>
+                    <iframe name="inv" style="display:none;"></iframe>
+                    <form id="subscribe-form" action="submit_email_updates.php" method="post" target="inv">
+                        <div class="form-group">
+                          <input type="text" id="email-text" name="email" class="form-control" placeholder="Tell us your email">
+                        </div>
+                    </form>
+                    <p id="email-invalid" style="color:red; display:none;">Error: invalid email</p>
+                    <div class="form-group">
+                          <button class="btn btn-default" onclick="submitEmailUpdates()" type="button">Subscribe for updates</button>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3 text-right" style="margin-left:200px;margin-top:10px;">
+                    <ul class="list-inline">
+                      <li><a rel="nofollow" href="https://www.machinteraction.com/parkinsons/info.html"><img width="150" src="./img/rochci.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <br/>
+        </div>
+    </footer>
+    <div id="alertModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+        	<div class="modal-body">
+        		<h2 class="text-center">Thank you!</h2>
+        		<p class="text-center">Your email has been recorded.</p>
+        		<p class="text-center">For future updates on this project, you will be notified.</p>
+        		
+        		<br/>
+        		<button class="btn btn-primary-second btn-lg center-block" data-dismiss="modal" aria-hidden="true">OK <i class="ion-android-close"></i></button>
+        	</div>
+        </div>
+        </div>
+    </div>
+    
+    <div id="emailModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+        	<div class="modal-body">
+        		<h2 class="text-center">We would like to hear from you!</h2>
+        		<p class="text-center">Enter your email below and we will follow up with you about 
+        		your experience with this site.</p>
+        		<iframe name="inv" style="display:none;"></iframe>
+        		<form id="inform-form" action="submit_email.php" method="post" target="inv">
+                    <div class="form-group">
+                        <input type="text" id="email-text-inform" name="email" class="form-control" placeholder="Email">
+                    </div>
+                </form>
+                <p id="email-invalid-inform" style="color:red; display:none;">Error: invalid email</p>
+        		
+        		<br/>
+        		<button onclick="submitEmail()" class="btn btn-primary-second btn-lg center-block" aria-hidden="true">OK <i class="ion-android-close"></i></button>
+        	</div>
+        </div>
+        </div>
+    </div>
+    <!--scripts loaded here -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.easing.min.js"></script>
+    <script src="./js/wow.js"></script>
+    <script src="./js/scripts.js"></script>
+    
+    <script>
+	
+	function agree(){
+		$('input:radio[name=consent2][value="yes"]').prop('checked', true);
+		$('#myform').submit();
+	}
+
+	function disagree(){
+		$('input:radio[name=consent2][value="no"]').prop('checked', true);
+		$('#myform').submit();
+	}
+	function submitContact(){
+		if($('#email-contact-text').val().length > 0){
+			var re = /\S+@\S+\.\S+/;
+			if(re.test($('#email-contact-text').val()) == true){
+				$('#email-contact-invalid').css('display', 'none');
+				$('#contact-form').submit();
+				$('#alertContactModal').modal('show');
+				$('#email-contact-text').val('');
+				$('#name-text').val('');
+				$('#phone-text').val('');
+				$('#message-text').val('');
+			}
+			else{
+				$('#email-contact-invalid').css('display', 'inline-block');
+			}
+		}
+	}
+
+	function submitEmail(){
+		if($('#email-text-inform').val().length == 0){
+			$('#email-invalid-inform').css('display', 'none');
+			$('#emailModal').modal('hide');
+			var symbol = $("#video-background")[0].src.indexOf("?") > -1 ? "&" : "?";
+			//modify source to autoplay and start video
+			$("#video-background")[0].src += symbol + "autoplay=1";
+		
+		}
+		var re = /\S+@\S+\.\S+/;
+		if(re.test($('#email-text-inform').val()) == true){
+			$('#email-invalid-inform').css('display', 'none');
+			$('#inform-form').submit();
+			$('#emailModal').modal('hide');
+			var symbol = $("#video-background")[0].src.indexOf("?") > -1 ? "&" : "?";
+			//modify source to autoplay and start video
+			$("#video-background")[0].src += symbol + "autoplay=1";
+		}
+		else{
+			$('#email-invalid-inform').css('display', 'inline-block');
+		}
+		
+	}
+	function submitEmailUpdates(){
+		if($('#email-text').val().length > 0){
+			var re = /\S+@\S+\.\S+/;
+			if(re.test($('#email-text').val()) == true){
+				$('#email-invalid').css('display', 'none');
+				$('#subscribe-form').submit();
+				$('#alertModal').modal('show');
+				$('#email-text').val('');
+			}
+			else{
+				$('#email-invalid').css('display', 'inline-block');
+			}
+		}
+	}
+	function getEmail(){
+		$('#emailModal').modal('show');
+		setID();
+	}
+    </script>
+    
+     <script>
+
+	var mP = document.getElementById('consent_content');
+	var dwnld = document.getElementById('downloadChrome');
+	
+     if((navigator.userAgent.indexOf("Opera") ||
+		navigator.userAgent.indexOf('OPR')) != -1 )
+    {
+        alert('Opera is not a WebRTC capable browser.\nPlease use Google Chrome.');
+		location.href = "#one";
+		mP.style.display = 'none';
+		dwnld.style.display = 'inline-block';
+    }
+    else if(navigator.userAgent.indexOf("Chrome") != -1 )
+    {
+    }
+    else if(navigator.userAgent.indexOf("Safari") != -1)
+    {
+        alert('Safari is not a WebRTC capable browser.\nPlease use Google Chrome.');
+		location.href = "#one";
+		mP.style.display = 'none';
+		dwnld.style.display = 'inline-block';
+    }
+    else if(navigator.userAgent.indexOf("Firefox") != -1 )
+    {
+         alert('Firefox is not a WebRTC capable browser.\nPlease use Google Chrome.');
+		 location.href = "#one";
+		 mP.style.display = 'none';
+		 dwnld.style.display = 'inline-block';
+    }
+    else if((navigator.userAgent.indexOf("MSIE") != -1 ) ||
+		(!!document.documentMode == true )) //IF IE > 10
+    {
+      alert('IE is not a WebRTC capable browser.\nPlease use Google Chrome.');
+	  location.href = "#one";
+	  mP.style.display = 'none';
+	  dwnld.style.display = 'inline-block';
+    }
+	</script>
+
+  </body>
+</html>

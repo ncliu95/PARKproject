@@ -102,7 +102,7 @@ $DBcon->close();
     			<button type="button" class="btn btn-warning btn-xl">COMPLETE HISTORY</button>
     		</div>
     		<div class = "col-md-3">
-    			<button type="button" class="btn btn-success btn-xl" onclick="location.href='https://www.machinteraction.com/parkinsons/index.html';">TAKE NEW MEASUREMENT</button>
+    			<button type="button" class="btn btn-success btn-xl" onclick="location.href='./park/task1-prep.html';">TAKE NEW MEASUREMENT</button>
     		</div>
     	</div>
     	<br><br><br>

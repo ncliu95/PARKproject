@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PARK</title>
+    <meta name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Codeply">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/animate.min.css" />
+    <link rel="stylesheet" href="./css/ionicons.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    
+  </head>
+  <body>
+    <nav id="topNav" class="navbar navbar-default-novid navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-collapse collapse" id="bs-navbar">
+                <ul class="nav navbar-nav">
+                	<li>
+                		<a id="navtext-main" class="navbar-brand-novid page-scroll" href="https://www.machinteraction.com/parkinsons/index.html">PARK</a>
+                	</li>
+                    <li>
+                        <a id="navtext" class="page-scroll" href="#last">Contact</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a id="navtext" class="page-scroll" href="https://www.machinteraction.com/parkinsons/info.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header id="first">
+    <section>
+        <div class="container">
+            <div class="row">
+            	<div class="col-md-8 col-md-offset-2 text-faded">
+                
+                	<h2>FAQ</h2>
+                	<p style="margin-top:50px"></p>
+                	<p style="font-size:20px;">The PARK system allows you to record yourself doing voice and motor tasks from the United Parkinson's 
+                	Disease Rating Scale. The recorded tasks will be collected and analyzed to detect symptoms of Parkinson's Disease. 
+                	</p><p>By recording, you consent to share your videos for research purposes.</p>
+                	<p style="margin-top:40px"></p>
+					<h3><a href="https://www.google.com/chrome/browser/" target="_blank"><span style="font-weight:bold;">Click here to download Google Chrome.</span></a></h3>
+					<p class="text-faded">(You must use Google Chrome to visit this site.)</p>
+					<p style="margin-top:40px"></p>
+					<p style="font-size:16px;">This research is being conducted by the ROC HCI Lab at the University of Rochester in conjunction with the Center 
+                	for Human Experimental Therapeutics at the University of Rochester Medical Center.</p>
+                	<p style="margin-top:40px"></p>
+                	<a href="#last" class="btn btn-primary-second btn-xl page-scroll">Get in Touch <i class="ion-android-arrow-down"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+       <!-- 
+ <div class="header-content">
+            <div class="inner">
+                <h1 >Parkinson's Analysis</h1>
+                <h4>with Remotely-Accessed Knowledge</h4>
+                <hr>
+                <a href="#video-background" id="toggleVideo" data-toggle="collapse" class="btn btn-primary btn-xl">Toggle Video</a> &nbsp; <a href="#one" class="btn btn-primary btn-xl page-scroll">Get Started</a>
+            </div>
+        </div>
+        <!~~<video autoplay="" loop="" class="fillWidth fadeIn wow collapse in" data-wow-delay="0.5s" poster="https://s3-us-west-2.amazonaws.com/coverr/poster/Traffic-blurred2.jpg" id="video-background">
+            <source src="./assets/tapping.mp4" type="video/mp4">Your browser does not support the video tag. I suggest you upgrade your browser.
+        </video>~~>
+        <iframe class="fillWidth fadeIn wow collapse in" data-wow-delay="0.5s" id="video-background" poster="https://s3-us-west-2.amazonaws.com/coverr/poster/Traffic-blurred2.jpg"
+        	src="http://www.youtube.com/embed/XGSy3_Czz8k?autoplay=1&modestbranding=1&autohide=1&showinfo=0&controls=0&rel=0" frameborder="0">
+		</iframe>
+ -->
+ 
+    </header>
+    <section id="last">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="margin-top-0 wow fadeIn">Get in Touch</h2>
+                    <hr class="primary">
+                    <p>We appreciate feedback. Fill out the form below and tell us if you run 
+                    into any issues, or leave your thoughts about the site. You can also send an email directly to <a id="a-darker" href="mailto:parktoolhelp@gmail.com">parktoolhelp@gmail.com</a>.</p>
+                </div>
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                <iframe name="inv" style="display:none;"></iframe>
+                    <form id="contact-form" class="contact-form row" action="submit_contact.php" method="post" target="inv">
+                        <div class="col-md-4">
+                            <label></label>
+                            <input type="text" id="name-text" name="name" class="form-control" placeholder="Name">
+                        </div>
+                        <div class="col-md-4">
+                            <label></label>
+                            <input type="text" id="email-contact-text" name="email-contact" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="col-md-4">
+                            <label></label>
+                            <input type="text" id="phone-text" name="phone" class="form-control" placeholder="Phone">
+                        </div>
+                        <div class="col-md-12">
+                            <label></label>
+                            <textarea id="message-text" name="message" class="form-control" rows="9" placeholder="Your message here.."></textarea>
+                        </div>
+                        <div class="col-md-4 col-md-offset-4">
+                            <label></label>
+                            <button type="button" onclick="submitContact()" class="btn btn-block btn-lg btn-default">Send <i class="ion-android-arrow-forward"></i></button>
+                         <!--parktoolhelp@gmail.com-->
+                        </div>
+                    </form>
+                    <p id="email-contact-invalid" style="color:red; margin-top:10px; display:none;">Error: invalid email</p>
+                       
+ 
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="row">
+               
+                <div class="col-xs-6 col-sm-3 column">
+                    <h4>About</h4>
+                    <ul class="list-unstyled">
+                        <li>Contact Us</li>
+                        <li><a href="mailto:parktoolhelp@gmail.com">parktoolhelp@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3 column">
+                    <h4>Stay Posted for Future Updates</h4>
+                    <iframe name="inv" style="display:none;"></iframe>
+                    <form id="subscribe-form" action="submit_email_updates.php" method="post" target="inv">
+                        <div class="form-group">
+                          <input type="text" id="email-text" name="email" class="form-control" placeholder="Tell us your email">
+                        </div>
+                    </form>
+                    <p id="email-invalid" style="color:red; display:none;">Error: invalid email</p>
+                    <div class="form-group">
+                          <button class="btn btn-default" onclick="submitEmailUpdates()" type="button">Subscribe for updates</button>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3 text-right" style="margin-left:200px;margin-top:10px;">
+                    <ul class="list-inline">
+                      <li><a rel="nofollow" href="https://www.machinteraction.com/parkinsons/info.html"><img width="150" src="./img/rochci.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <br/>
+        </div>
+    </footer>
+    <div id="alertContactModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+        	<div class="modal-body">
+        		<h2 class="text-center">Thank you!</h2>
+        		<p class="text-center">Your message has been sent.</p>
+        		
+        		<br/>
+        		<button class="btn btn-primary-second btn-lg center-block" data-dismiss="modal" aria-hidden="true">OK <i class="ion-android-close"></i></button>
+        	</div>
+        </div>
+        </div>
+    </div>
+    <div id="alertModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+        	<div class="modal-body">
+        		<h2 class="text-center">Thank you!</h2>
+        		<p class="text-center">Your email has been recorded.</p>
+        		<p class="text-center">For future updates on this project, you will be notified.</p>
+        		
+        		<br/>
+        		<button class="btn btn-primary-second btn-lg center-block" data-dismiss="modal" aria-hidden="true">OK <i class="ion-android-close"></i></button>
+        	</div>
+        </div>
+        </div>
+    </div>
+    <!--scripts loaded here -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.easing.min.js"></script>
+    <script src="./js/wow.js"></script>
+    <script src="./js/scripts.js"></script>
+    
+    <script>
+
+	function submitContact(){
+		if($('#email-contact-text').val().length > 0){
+			var re = /\S+@\S+\.\S+/;
+			if(re.test($('#email-contact-text').val()) == true){
+				$('#email-contact-invalid').css('display', 'none');
+				$('#contact-form').submit();
+				$('#alertContactModal').modal('show');
+				$('#email-contact-text').val('');
+				$('#name-text').val('');
+				$('#phone-text').val('');
+				$('#message-text').val('');
+			}
+			else{
+				$('#email-contact-invalid').css('display', 'inline-block');
+			}
+		}
+	}
+
+	function submitEmailUpdates(){
+		if($('#email-text').val().length > 0){
+			var re = /\S+@\S+\.\S+/;
+			if(re.test($('#email-text').val()) == true){
+				$('#email-invalid').css('display', 'none');
+				$('#subscribe-form').submit();
+				$('#alertModal').modal('show');
+				$('#email-text').val('');
+			}
+			else{
+				$('#email-invalid').css('display', 'inline-block');
+			}
+		}
+	}
+    </script>
+    
+
+  </body>
+</html>

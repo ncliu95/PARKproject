@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PARK</title>
+    <meta name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Codeply">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/animate.min.css" />
+    <link rel="stylesheet" href="./css/ionicons.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+	<script>
+		function getID(){
+		var userID = '';
+		userID = sessionStorage.getItem('userID');
+		document.getElementById("myform").myID.value = userID;
+		}
+	</script>
+  </head>
+  <body onload="getID()">
+    <nav id="topNav" class="navbar navbar-default-novid navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-collapse collapse" id="bs-navbar">
+                <ul class="nav navbar-nav">
+                	<li>
+                		<a id="navtext-main" class="navbar-brand-novid page-scroll" href="https://www.machinteraction.com/parkinsons/index.html">PARK</a>
+                	</li>
+                    <li>
+                        <a id="navtext" class="page-scroll" href="#footer">Contact</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a id="navtext" class="page-scroll" href="https://www.machinteraction.com/parkinsons/info.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header id="first">
+    <section>
+        <div class="container">
+            	<div class="text-faded">
+				
+			<h2 id="header1">Demographic Survey:</h2>
+			<h2 id="header2" style="display:none;">Post-Session Feedback:</h2>
+		
+			<div class="progress center-block" style="width:640px; margin-top:40px;">
+				<div class="progress-bar"></div>
+			</div>
+			<div class="well">
+			<div class="row">
+			
+			<div id="questions" class="col-md-12">
+				
+				<div class="col-md-6 text-left">
+					<div id="question-1">
+						<p><span style="font-weight:bold;">1. </span>Gender: (please select one) *</p>
+					</div>
+					
+					<div id="question-2" style="display:none;">
+						<p><span style="font-weight:bold;">2. </span>Age: (ex. "34" not "thirty-four") *</p>
+					</div>
+					
+					<div id="question-3" style="display:none;">
+						<p><span style="font-weight:bold;">3. </span>Country: * </p>
+					</div>
+					
+					<div id="question-4" style="display:none;">
+						<p><span style="font-weight:bold;">4. </span>Is English your first language? *</p>
+					</div>
+					
+					<div id="question-5" style="display:none;">
+						<p><span style="font-weight:bold;">5. </span>Have you ever engaged in any automated Parkinson's disease analysis? (ex. using a smartphone app to monitor Parkinson's symptoms)*</p>
+					</div>
+					
+					<div id="question-6" style="display:none;">
+						<p><span style="font-weight:bold;">6. </span>Have you ever been diagnosed with Parkinson's disease? *</p>
+					</div>
+					
+					<div id="question-7" style="display:none;">
+						<p><span style="font-weight:bold;">7. </span>If you have been diagnosed, what year were you diagnosed? (if not, answer "N/A") *</p>
+					</div>
+					
+					<div id="question-8" style="display:none;">
+						<p><span style="font-weight:bold;">8. </span>What medication are you currently taking for Parkinson's disease? (if not, answer "N/A") *</p>
+					</div>
+					
+					<div id="question-9" style="display:none;">
+						<p><span style="font-weight:bold;">9. </span>How long ago did you last take your medication for Parkinson's disease? (if not taking medication, answer "N/A") *</p>
+					</div>
+					
+					<div id="question-10" style="display:none;">
+						<p><span style="font-weight:bold;">10. </span>Current relationship status (please select one): *</p>
+					</div>
+					
+					<div id="question-11" style="display:none;">
+						<p><span style="font-weight:bold;">11. </span>What is the highest degree you have obtained? *</p>
+					</div>
+					
+					<div id="question-12" style="display:none;">
+						<p><span style="font-weight:bold;">12. </span>What is your annual household income? * 
+						(the total income for all members of your household during the past year)</p>
+					</div>
+					
+					<div id="question-13" style="display:none;">
+						<p><span style="font-weight:bold;">13. </span>Ethnicity: *</p>
+					</div>
+					
+					<div id="question-14" style="display:none;">
+						<p><span style="font-weight:bold;">14. </span>Which of the following categories describe(s) your race? *</p>
+					</div>
+					
+					<div id="question-15" style="display:none;">
+						<p><span style="font-weight:bold;">1. </span>Email Address: </p>
+						<p style="font-size:14px;">If you would like to receive a $50 Amazon gift card after responding to the feedback, please enter your email.</p>
+					</div>
+					
+					<div id="question-16" style="display:none;">
+						<p><span style="font-weight:bold;">2. </span>The web application was easy to use. *</p>
+					</div>
+					
+					<div id="question-17" style="display:none;">
+						<p><span style="font-weight:bold;">3. </span>I understood all the instructions for performing the tasks. *</p>
+					</div>
+					
+					<div id="question-18" style="display:none;">
+						<p><span style="font-weight:bold;">4. </span>I would like to use the system in the future (<em>when it is able to provide rating scores for the tasks</em>). *</p>
+					</div>
+					
+					<div id="question-19" style="display:none;">
+						<p><span style="font-weight:bold;">5. </span>I had no problem browsing through the system. *</p>
+					</div>
+					
+					<div id="question-20" style="display:none;">
+						<p><span style="font-weight:bold;">6. </span>The videos shown in the interface were helpful. *</p>
+					</div>
+					
+					<div id="question-21" style="display:none;">
+						<p><span style="font-weight:bold;">7. </span>I knew how to perform the tests beforehand. *</p>
+					</div>
+					
+					<div id="question-22" style="display:none;">
+						<p><span style="font-weight:bold;">8. </span>What did you like most about the web application?</p>
+					</div>
+					
+					<div id="question-23" style="display:none;">
+						<p><span style="font-weight:bold;">9. </span>What did you like least about the web application?</p>
+					</div>
+					
+					<div id="question-24" style="display:none;">
+						<p><span style="font-weight:bold;">10. </span>Study strengths: What did you enjoy most about this study?</p>
+					</div>
+					
+					<div id="question-25" style="display:none;">
+						<p><span style="font-weight:bold;">11. </span>Areas for improvement: What suggestions would you make to improve this study?</p>
+					</div>
+				</div>
+				<div class="col-md-5 text-left" style="font-size:16px;">
+					<form id="myform" action="submit_survey.php" method="post">
+						<div id="question-1-answer">
+							1. <input type="radio" name="gender" value="female"> Female<br>
+							2. <input type="radio" name="gender" value="male"> Male<br>
+							<input type="hidden" name="myID" value="">
+						</div>
+						
+						<div id="question-2-answer" style="display:none;">
+							<input type="text" name="age" id="ageText"><br>
+						</div>
+						
+						<div id="question-3-answer" style="display:none;">
+							<input type="text" name="country" id="countryText"><br>
+						</div>
+						
+						<div id="question-4-answer" style="display:none;">
+							1. <input type="radio" name="english" value="yes"> Yes<br>
+							2. <input type="radio" name="english" value="no"> No<br>
+						</div>
+						
+						<div id="question-5-answer" style="display:none;">
+							1. <input type="radio" name="prevAnalysis" value="yes"> Yes<br>
+							2. <input type="radio" name="prevAnalysis" value="no"> No<br>
+						</div>
+						
+						<div id="question-6-answer" style="display:none;">
+							1. <input type="radio" name="diagnosed" value="yes"> Yes<br>
+							2. <input type="radio" name="diagnosed" value="no"> No<br>
+						</div>
+						
+						<div id="question-7-answer" style="display:none;">
+							<input type="text" name="yearDiagnosis" id="diagnosisText"><br>
+						</div>
+						
+						<div id="question-8-answer" style="display:none;">
+							<input type="text" name="medication" id="medicationText"><br>
+						</div>
+						
+						<div id="question-9-answer" style="display:none;">
+							<input type="text" name="lastMedication" id="lastMedText"><br>
+						</div>
+						
+						<div id="question-10-answer" style="display:none;">
+							1. <input type="radio" name="relationship" value="single"> Single<br>
+							2. <input type="radio" name="relationship" value="dating"> Casually dating<br>
+							3. <input type="radio" name="relationship" value="committed"> In a committed relationship<br>
+							4. <input type="radio" name="relationship" value="engaged"> Engaged<br>
+							5. <input type="radio" name="relationship" value="married"> Married<br>
+							6. <input type="radio" name="relationship" value="divorced"> Divorced<br>
+						</div>
+						
+						<div id="question-11-answer" style="display:none;">
+							1. <input type="radio" name="degree" value="less10"> Less than 10th grade<br>
+							2. <input type="radio" name="degree" value="10"> 10th grade<br>
+							3. <input type="radio" name="degree" value="11"> 11th grade<br>
+							4. <input type="radio" name="degree" value="hs"> High school diploma<br>
+							5. <input type="radio" name="degree" value="someCollege"> Some college or trade school<br>
+							6. <input type="radio" name="degree" value="aa"> AA degree or trade school certificate<br>
+							7. <input type="radio" name="degree" value="ba"> BA/BS degree<br>
+							8. <input type="radio" name="degree" value="ma"> MA/MS/MBA degree<br>
+							9. <input type="radio" name="degree" value="law"> Law degree<br>
+							q. <input type="radio" name="degree" value="phd"> PhD/PsyD/EdD degree<br>
+							w. <input type="radio" name="degree" value="dds"> DDS degree<br>
+							e. <input type="radio" name="degree" value="md"> MD degree<br>
+						</div>
+						
+						<div id="question-12-answer" style="display:none;">
+							1. <input type="radio" name="income" value="less10k"> Less than $10,000<br>
+							2. <input type="radio" name="income" value="l0to20k"> $10,000 to $19,999<br>
+							3. <input type="radio" name="income" value="20to30k"> $20,000 to $29,999<br>
+							4. <input type="radio" name="income" value="30to40k"> $30,000 to $39,999<br>
+							5. <input type="radio" name="income" value="40to50k"> $40,000 to $49,999<br>
+							6. <input type="radio" name="income" value="50to60k"> $50,000 to $59,999<br>
+							7. <input type="radio" name="income" value="60to70k"> $60,000 to $69,999<br>
+							8. <input type="radio" name="income" value="70to80k"> $70,000 to $79,999<br>
+							9. <input type="radio" name="income" value="80to90k"> $80,000 to $89,999<br>
+							q. <input type="radio" name="income" value="90to100k"> $90,000 to $99,999<br>
+							w. <input type="radio" name="income" value="over100k"> $100,000 or more<br>
+						</div>
+						
+						<div id="question-13-answer" style="display:none;">
+							1. <input type="radio" name="ethnicity" value="hispanic"> Hispanic or Latino<br>
+							2. <input type="radio" name="ethnicity" value="notHispanic"> Not Hispanic or Latino<br>
+						</div>
+						
+						<div id="question-14-answer" style="display:none;">
+							1. <input type="checkbox" name="race[]" id="race" value="nativeAmerican"> American Indian or Alaskan Native<br>
+							2. <input type="checkbox" name="race[]" id="race" value="asian"> Asian<br>
+							3. <input type="checkbox" name="race[]" id="race" value="white"> White<br>
+							4. <input type="checkbox" name="race[]" id="race" value="nativePacific"> Native Hawaiian or Other Pacific Islander<br>
+							5. <input type="checkbox" name="race[]" id="race" value="black"> Black or African American<br>
+							6. Other (please specify) <input type="text" name="raceOther" id="otherText"><br>
+						</div>
+						
+						<div id="question-15-answer" style="display:none;">
+							<input type="text" name="email" id="emailText"><br>
+							<p id="email-invalid" style="color:red; margin-top:5px; display:none;">Error: invalid email.</p>
+						</div>
+						
+						<div id="question-16-answer" style="display:none;">
+							1. <input type="radio" name="easyUse" value="stronglyDisagree"> Strongly disagree<br>
+							2. <input type="radio" name="easyUse" value="disagree"> Disagree<br>
+							3. <input type="radio" name="easyUse" value="neither"> Neither<br>
+							4. <input type="radio" name="easyUse" value="agree"> Agree<br>
+							5. <input type="radio" name="easyUse" value="stronglyAgree"> Strongly agree<br>
+						</div>
+						
+						<div id="question-17-answer" style="display:none;">
+							1. <input type="radio" name="understandInstruct" value="stronglyDisagree"> Strongly disagree<br>
+							2. <input type="radio" name="understandInstruct" value="disagree"> Disagree<br>
+							3. <input type="radio" name="understandInstruct" value="neither"> Neither<br>
+							4. <input type="radio" name="understandInstruct" value="agree"> Agree<br>
+							5. <input type="radio" name="understandInstruct" value="stronglyAgree"> Strongly agree<br>
+						</div>
+						
+						<div id="question-18-answer" style="display:none;">
+							1. <input type="radio" name="futureUse" value="stronglyDisagree"> Strongly disagree<br>
+							2. <input type="radio" name="futureUse" value="disagree"> Disagree<br>
+							3. <input type="radio" name="futureUse" value="neither"> Neither<br>
+							4. <input type="radio" name="futureUse" value="agree"> Agree<br>
+							5. <input type="radio" name="futureUse" value="stronglyAgree"> Strongly agree<br>
+						</div>
+						
+						<div id="question-19-answer" style="display:none;">
+							1. <input type="radio" name="noProblems" value="stronglyDisagree"> Strongly disagree<br>
+							2. <input type="radio" name="noProblems" value="disagree"> Disagree<br>
+							3. <input type="radio" name="noProblems" value="neither"> Neither<br>
+							4. <input type="radio" name="noProblems" value="agree"> Agree<br>
+							5. <input type="radio" name="noProblems" value="stronglyAgree"> Strongly agree<br>
+						</div>
+						
+						<div id="question-20-answer" style="display:none;">
+							1. <input type="radio" name="helpfulVideos" value="stronglyDisagree"> Strongly disagree<br>
+							2. <input type="radio" name="helpfulVideos" value="disagree"> Disagree<br>
+							3. <input type="radio" name="helpfulVideos" value="neither"> Neither<br>
+							4. <input type="radio" name="helpfulVideos" value="agree"> Agree<br>
+							5. <input type="radio" name="helpfulVideos" value="stronglyAgree"> Strongly agree<br>
+						</div>
+						
+						<div id="question-21-answer" style="display:none;">
+							1. <input type="radio" name="priorKnowledge" value="stronglyDisagree"> Strongly disagree<br>
+							2. <input type="radio" name="priorKnowledge" value="disagree"> Disagree<br>
+							3. <input type="radio" name="priorKnowledge" value="neither"> Neither<br>
+							4. <input type="radio" name="priorKnowledge" value="agree"> Agree<br>
+							5. <input type="radio" name="priorKnowledge" value="stronglyAgree"> Strongly agree<br>
+						</div>
+						
+						<div id="question-22-answer" style="display:none;">
+							<textarea name="likes" rows="4" cols="40" id="likeText" style="margin-bottom:0px;"></textarea>
+							<img onclick="startDictation()" src="img/microphone.gif"/>
+							<p>Click the microphone to record a response.</p>
+						</div>
+						
+						<div id="question-23-answer" style="display:none;">
+							<textarea name="dislikes" rows="4" cols="40" id="dislikeText"></textarea>
+							<img onclick="startDictation()" src="img/microphone.gif"/>
+							<p>Click the microphone to record a response.</p>
+						</div>
+						
+						<div id="question-24-answer" style="display:none;">
+							<textarea name="strengths" rows="4" cols="40" id="strengthText"></textarea>
+							<img onclick="startDictation()" src="img/microphone.gif"/>
+							<p>Click the microphone to record a response.</p>
+						</div>
+						
+						<div id="question-25-answer" style="display:none;">
+							<textarea name="improvements" rows="4" cols="40" id="improveText"></textarea>
+							<img onclick="startDictation()" src="img/microphone.gif"/>
+							<p>Click the microphone to record a response.</p>
+						</div>
+					</form>			
+				</div>
+				
+			</div><!--question1-->
+			
+		
+			
+			<div id="end" style="display:none;" class="col-md-12 text-center">
+				
+				<p>Finished? Press enter to submit the survey.</p>
+			</div>
+			
+			</div><!--row-->
+			</div><!--well-->
+			<div class="text-center">
+				<p style="margin-top: 20px;">Press <span style="font-weight:bold;">right arrow</span> or <span style="font-weight:bold;">enter</span> to move to the next question and 
+				the <span style="font-weight:bold;">left arrow</span> to go back.</p>
+				<p style="margin-top: 10px;">Hit the corresponding numbers/letters on the keyboard to answer multiple choice.</p>
+				<p style="margin-top: 10px;">* required</p>
+			</div>
+						
+			</div>
+        </div>
+    </section>
+    </header>
+
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="row">
+               
+                <div class="col-xs-6 col-sm-3 column">
+                    <h4>About</h4>
+                    <ul class="list-unstyled">
+                        <li>Contact Us</li>
+                        <li><a href="mailto:parktoolhelp@gmail.com">parktoolhelp@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3 column">
+                    <h4>Stay Posted for Future Updates</h4>
+                    <iframe name="inv" style="display:none;"></iframe>
+                    <form id="subscribe-form" action="submit_email_updates.php" method="post" target="inv">
+                        <div class="form-group">
+                          <input type="text" id="email-text" name="email" class="form-control" placeholder="Tell us your email">
+                        </div>
+                    </form>
+                    <p id="email-invalid" style="color:red; display:none;">Error: invalid email</p>
+                    <div class="form-group">
+                          <button class="btn btn-default" onclick="submitEmailUpdates()" type="button">Subscribe for updates</button>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3 text-right" style="margin-left:200px;margin-top:10px;">
+                    <ul class="list-inline">
+                      <li><a rel="nofollow" href="https://www.machinteraction.com/parkinsons/info.html"><img width="150" src="./img/rochci.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <br/>
+        </div>
+    </footer>
+    <div id="alertModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+        	<div class="modal-body">
+        		<h2 class="text-center">Thank you!</h2>
+        		<p class="text-center">Your email has been recorded.</p>
+        		<p class="text-center">For future updates on this project, you will be notified.</p>
+        		
+        		<br/>
+        		<button class="btn btn-primary-second btn-lg center-block" data-dismiss="modal" aria-hidden="true">OK <i class="ion-android-close"></i></button>
+        	</div>
+        </div>
+        </div>
+    </div>
+    <!--scripts loaded here -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.easing.min.js"></script>
+    <script src="./js/wow.js"></script>
+    <script src="./js/scripts.js"></script>
+    
+    <script>
+	function submitEmailUpdates(){
+		if($('#email-text').val().length > 0){
+			var re = /\S+@\S+\.\S+/;
+			if(re.test($('#email-text').val()) == true){
+				$('#email-invalid').css('display', 'none');
+				$('#subscribe-form').submit();
+				$('#alertModal').modal('show');
+				$('#email-text').val('');
+			}
+			else{
+				$('#email-invalid').css('display', 'inline-block');
+			}
+		}
+	}
+    </script>
+	<script>
+	
+	var currentQuestion = 0;
+	jQuery(function($){
+		
+		window.onkeydown = function(e){
+		
+			if(currentQuestion == 0){
+				if(e.keyCode === 49 || e.keyCode === 97){
+					e.preventDefault();
+					$('input:radio[name=gender][value="female"]').prop('checked', true);
+				}
+				else if(e.keyCode === 50 || e.keyCode === 98){
+					e.preventDefault();
+					$('input:radio[name=gender][value="male"]').prop('checked', true);
+				}
+			}
+			else if(currentQuestion == 3){
+				if(e.keyCode === 49 || e.keyCode === 97){
+					e.preventDefault();
+					$('input:radio[name=english][value="yes"]').prop('checked', true);
+				}
+				else if(e.keyCode === 50 || e.keyCode === 98){
+					e.preventDefault();
+					$('input:radio[name=english][value="no"]').prop('checked', true);
+				}
+			}
+			else if(currentQuestion == 4){
+				if(e.keyCode === 49 || e.keyCode === 97){
+					e.preventDefault();
+					$('input:radio[name=prevAnalysis][value="yes"]').prop('checked', true);
+				}
+				else if(e.keyCode === 50 || e.keyCode === 98){
+					e.preventDefault();
+					$('input:radio[name=prevAnalysis][value="no"]').prop('checked', true);
+				}
+			}
+			else if(currentQuestion == 5){
+				if(e.keyCode === 49 || e.keyCode === 97){
+					e.preventDefault();
+					$('input:radio[name=diagnosed][value="yes"]').prop('checked', true);
+				}
+				else if(e.keyCode === 50 || e.keyCode === 98){
+					e.preventDefault();
+					$('input:radio[name=diagnosed][value="no"]').prop('checked', true);
+				}
+			}
+			else if(currentQuestion == 9){
+				if(e.keyCode === 49 || e.keyCode === 97){
+					e.preventDefault();
+					$('input:radio[name=relationship][value="single"]').prop('checked', true);
+				}
+				else if(e.keyCode === 50 || e.keyCode === 98){
+					e.preventDefault();
+					$('input:radio[name=relationship][value="dating"]').prop('checked', true);
+				}
+				else if(e.keyCode === 51 || e.keyCode === 99){
+					e.preventDefault();
+					$('input:radio[name=relationship][value="committed"]').prop('checked', true);
+				}
+				else if(e.keyCode === 52 || e.keyCode === 100){
+					e.preventDefault();
+					$('input:radio[name=relationship][value="engaged"]').prop('checked', true);
+				}
+				else if(e.keyCode === 53 || e.keyCode === 101){
+					e.preventDefault();
+					$('input:radio[name=relationship][value="married"]').prop('checked', true);
+				}
+				else if(e.keyCode === 54 || e.keyCode === 102){
+					e.preventDefault();
+					$('input:radio[name=relationship][value="divorced"]').prop('checked', true);
+				}
+			}
+			else if(currentQuestion == 10){
+				if(e.keyCode === 49 || e.keyCode === 97){
+					e.preventDefault();
+					$('input:radio[name=degree][value="less10"]').prop('checked', true);
+				}
+				else if(e.keyCode === 50 || e.keyCode === 98){
+					e.preventDefault();
+					$('input:radio[name=degree][value="10"]').prop('checked', true);
+				}
+				else if(e.keyCode === 51 || e.keyCode === 99){
+					e.preventDefault();
+					$('input:radio[name=degree][value="11"]').prop('checked', true);
+				}
+				else if(e.keyCode === 52 || e.keyCode === 100){
+					e.preventDefault();
+					$('input:radio[name=degree][value="hs"]').prop('checked', true);
+				}
+				else if(e.keyCode === 53 || e.keyCode === 101){
+					e.preventDefault();
+					$('input:radio[name=degree][value="someCollege"]').prop('checked', true);
+				}
+				else if(e.keyCode === 54 || e.keyCode === 102){
+					e.preventDefault();
+					$('input:radio[name=degree][value="aa"]').prop('checked', true);
+				}
+				else if(e.keyCode === 55 || e.keyCode === 103){
+					e.preventDefault();
+					$('input:radio[name=degree][value="ba"]').prop('checked', true);
+				}
+				else if(e.keyCode === 56 || e.keyCode === 104){
+					e.preventDefault();
+					$('input:radio[name=degree][value="ma"]').prop('checked', true);
+				}
+				else if(e.keyCode === 57 || e.keyCode === 105){
+					e.preventDefault();
+					$('input:radio[name=degree][value="law"]').prop('checked', true);
+				}
+				else if(e.keyCode === 81){
+					e.preventDefault();
+					$('input:radio[name=degree][value="phd"]').prop('checked', true);
+				}
+				else if(e.keyCode === 87){
+					e.preventDefault();
+					$('input:radio[name=degree][value="dds"]').prop('checked', true);
+				}
+				else if(e.keyCode === 69){
+					e.preventDefault();
+					$('input:radio[name=degree][value="md"]').prop('checked', true);
+				}
+			}
+			else if(currentQuestion == 11){
+				if(e.keyCode === 49 || e.keyCode === 97){
+					e.preventDefault();
+					$('input:radio[name=income][value="less10k"]').prop('checked', true);
+				}
+				else if(e.keyCode === 50 || e.keyCode === 98){
+					e.preventDefault();
+					$('input:radio[name=income][value="l0to20k"]').prop('checked', true);
+				}
+				else if(e.keyCode === 51 || e.keyCode === 99){
+					e.preventDefault();
+					$('input:radio[name=income][value="20to30k"]').prop('checked', true);
+				}
+				else if(e.keyCode === 52 || e.keyCode === 100){
+					e.preventDefault();
+					$('input:radio[name=income][value="30to40k"]').prop('checked', true);
+				}
+				else if(e.keyCode === 53 || e.keyCode === 101){
+					e.preventDefault();
+					$('input:radio[name=income][value="40to50k"]').prop('checked', true);
+				}
+				else if(e.keyCode === 54 || e.keyCode === 102){
+					e.preventDefault();
+					$('input:radio[name=income][value="50to60k"]').prop('checked', true);
+				}
+				else if(e.keyCode === 55 || e.keyCode === 103){
+					e.preventDefault();
+					$('input:radio[name=income][value="60to70k"]').prop('checked', true);
+				}
+				else if(e.keyCode === 56 || e.keyCode === 104){
+					e.preventDefault();
+					$('input:radio[name=income][value="70to80k"]').prop('checked', true);
+				}
+				else if(e.keyCode === 57 || e.keyCode === 105){
+					e.preventDefault();
+					$('input:radio[name=income][value="80to90k"]').prop('checked', true);
+				}
+				else if(e.keyCode === 81){
+					e.preventDefault();
+					$('input:radio[name=income][value="90to100k"]').prop('checked', true);
+				}
+				else if(e.keyCode === 87){
+					e.preventDefault();
+					$('input:radio[name=income][value="over100k"]').prop('checked', true);
+				}
+			}
+			else if(currentQuestion == 12){
+				if(e.keyCode === 49 || e.keyCode === 97){
+					e.preventDefault();
+					$('input:radio[name=ethnicity][value="hispanic"]').prop('checked', true);
+				}
+				else if(e.keyCode === 50 || e.keyCode === 98){
+					e.preventDefault();
+					$('input:radio[name=ethnicity][value="notHispanic"]').prop('checked', true);
+				}
+			}
+			else if(currentQuestion == 13){
+				if(e.keyCode === 49 || e.keyCode === 97){
+					e.preventDefault();
+					if($('input:checkbox[value="nativeAmerican"]').is(":checked")){
+						$('input:checkbox[value="nativeAmerican"]').prop('checked', false);
+					}
+					else{
+						$('input:checkbox[value="nativeAmerican"]').prop('checked', true);
+					}
+				}
+				else if(e.keyCode === 50 || e.keyCode === 98){
+					e.preventDefault();
+					if($('input:checkbox[value="asian"]').is(":checked")){
+						$('input:checkbox[value="asian"]').prop('checked', false);
+					}
+					else{
+						$('input:checkbox[value="asian"]').prop('checked', true);
+					}
+				}
+				else if(e.keyCode === 51 || e.keyCode === 99){
+					e.preventDefault();
+					if($('input:checkbox[value="white"]').is(":checked")){
+						$('input:checkbox[value="white"]').prop('checked', false);
+					}
+					else{
+						$('input:checkbox[value="white"]').prop('checked', true);
+					}
+				}
+				else if(e.keyCode === 52 || e.keyCode === 100){
+					e.preventDefault();
+					if($('input:checkbox[value="nativePacific"]').is(":checked")){
+						$('input:checkbox[value="nativePacific"]').prop('checked', false);
+					}
+					else{
+						$('input:checkbox[value="nativePacific"]').prop('checked', true);
+					}
+				}
+				else if(e.keyCode === 53 || e.keyCode === 101){
+					e.preventDefault();
+					if($('input:checkbox[value="black"]').is(":checked")){
+						$('input:checkbox[value="black"]').prop('checked', false);
+					}
+					else{
+						$('input:checkbox[value="black"]').prop('checked', true);
+					}
+				}
+			}
+			else if(currentQuestion == 15){
+				if(e.keyCode === 49 || e.keyCode === 97){
+					e.preventDefault();
+					$('input:radio[name=easyUse][value="stronglyDisagree"]').prop('checked', true);
+				}
+				else if(e.keyCode === 50 || e.keyCode === 98){
+					e.preventDefault();
+					$('input:radio[name=easyUse][value="disagree"]').prop('checked', true);
+				}
+				else if(e.keyCode === 51 || e.keyCode === 99){
+					e.preventDefault();
+					$('input:radio[name=easyUse][value="neither"]').prop('checked', true);
+				}
+				else if(e.keyCode === 52 || e.keyCode === 100){
+					e.preventDefault();
+					$('input:radio[name=easyUse][value="agree"]').prop('checked', true);
+				}
+				else if(e.keyCode === 53 || e.keyCode === 101){
+					e.preventDefault();
+					$('input:radio[name=easyUse][value="stronglyAgree"]').prop('checked', true);
+				}
+			}
+			else if(currentQuestion == 16){
+				if(e.keyCode === 49 || e.keyCode === 97){
+					e.preventDefault();
+					$('input:radio[name=understandInstruct][value="stronglyDisagree"]').prop('checked', true);
+				}
+				else if(e.keyCode === 50 || e.keyCode === 98){
+					e.preventDefault();
+					$('input:radio[name=understandInstruct][value="disagree"]').prop('checked', true);
+				}
+				else if(e.keyCode === 51 || e.keyCode === 99){
+					e.preventDefault();
+					$('input:radio[name=understandInstruct][value="neither"]').prop('checked', true);
+				}
+				else if(e.keyCode === 52 || e.keyCode === 100){
+					e.preventDefault();
+					$('input:radio[name=understandInstruct][value="agree"]').prop('checked', true);
+				}
+				else if(e.keyCode === 53 || e.keyCode === 101){
+					e.preventDefault();
+					$('input:radio[name=understandInstruct][value="stronglyAgree"]').prop('checked', true);
+				}
+			}
+			else if(currentQuestion == 17){
+				if(e.keyCode === 49 || e.keyCode === 97){
+					e.preventDefault();
+					$('input:radio[name=futureUse][value="stronglyDisagree"]').prop('checked', true);
+				}
+				else if(e.keyCode === 50 || e.keyCode === 98){
+					e.preventDefault();
+					$('input:radio[name=futureUse][value="disagree"]').prop('checked', true);
+				}
+				else if(e.keyCode === 51 || e.keyCode === 99){
+					e.preventDefault();
+					$('input:radio[name=futureUse][value="neither"]').prop('checked', true);
+				}
+				else if(e.keyCode === 52 || e.keyCode === 100){
+					e.preventDefault();
+					$('input:radio[name=futureUse][value="agree"]').prop('checked', true);
+				}
+				else if(e.keyCode === 53 || e.keyCode === 101){
+					e.preventDefault();
+					$('input:radio[name=futureUse][value="stronglyAgree"]').prop('checked', true);
+				}
+			}
+			else if(currentQuestion == 18){
+				if(e.keyCode === 49 || e.keyCode === 97){
+					e.preventDefault();
+					$('input:radio[name=noProblems][value="stronglyDisagree"]').prop('checked', true);
+				}
+				else if(e.keyCode === 50 || e.keyCode === 98){
+					e.preventDefault();
+					$('input:radio[name=noProblems][value="disagree"]').prop('checked', true);
+				}
+				else if(e.keyCode === 51 || e.keyCode === 99){
+					e.preventDefault();
+					$('input:radio[name=noProblems][value="neither"]').prop('checked', true);
+				}
+				else if(e.keyCode === 52 || e.keyCode === 100){
+					e.preventDefault();
+					$('input:radio[name=noProblems][value="agree"]').prop('checked', true);
+				}
+				else if(e.keyCode === 53 || e.keyCode === 101){
+					e.preventDefault();
+					$('input:radio[name=noProblems][value="stronglyAgree"]').prop('checked', true);
+				}
+			}
+			else if(currentQuestion == 19){
+				if(e.keyCode === 49 || e.keyCode === 97){
+					e.preventDefault();
+					$('input:radio[name=helpfulVideos][value="stronglyDisagree"]').prop('checked', true);
+				}
+				else if(e.keyCode === 50 || e.keyCode === 98){
+					e.preventDefault();
+					$('input:radio[name=helpfulVideos][value="disagree"]').prop('checked', true);
+				}
+				else if(e.keyCode === 51 || e.keyCode === 99){
+					e.preventDefault();
+					$('input:radio[name=helpfulVideos][value="neither"]').prop('checked', true);
+				}
+				else if(e.keyCode === 52 || e.keyCode === 100){
+					e.preventDefault();
+					$('input:radio[name=helpfulVideos][value="agree"]').prop('checked', true);
+				}
+				else if(e.keyCode === 53 || e.keyCode === 101){
+					e.preventDefault();
+					$('input:radio[name=helpfulVideos][value="stronglyAgree"]').prop('checked', true);
+				}
+			}
+			else if(currentQuestion == 20){
+				if(e.keyCode === 49 || e.keyCode === 97){
+					e.preventDefault();
+					$('input:radio[name=priorKnowledge][value="stronglyDisagree"]').prop('checked', true);
+				}
+				else if(e.keyCode === 50 || e.keyCode === 98){
+					e.preventDefault();
+					$('input:radio[name=priorKnowledge][value="disagree"]').prop('checked', true);
+				}
+				else if(e.keyCode === 51 || e.keyCode === 99){
+					e.preventDefault();
+					$('input:radio[name=priorKnowledge][value="neither"]').prop('checked', true);
+				}
+				else if(e.keyCode === 52 || e.keyCode === 100){
+					e.preventDefault();
+					$('input:radio[name=priorKnowledge][value="agree"]').prop('checked', true);
+				}
+				else if(e.keyCode === 53 || e.keyCode === 101){
+					e.preventDefault();
+					$('input:radio[name=priorKnowledge][value="stronglyAgree"]').prop('checked', true);
+				}
+			}
+		
+			//if right arrow or enter is pressed, next question
+			if(e.keyCode === 13 || e.keyCode === 39){
+				e.preventDefault();
+				if(currentQuestion == 0 && $('input:radio[name=gender]:checked').length > 0){
+					$('#question-1').css('display', 'none');
+					$('#question-1-answer').css('display', 'none');
+					$('#question-2-answer').css('display', 'inline-block');
+					$('#question-2').css('display', 'inline-block');
+					$('#ageText').focus();
+					$(".progress-bar").css("width", 4 + "%").text(4 + " %");
+					currentQuestion++;
+				}
+				else if(currentQuestion == 1 && $('#ageText').val() > 0){
+					$('#question-2').css('display', 'none');
+					$('#question-2-answer').css('display', 'none');
+					$('#question-3-answer').css('display', 'inline-block');
+					$('#question-3').css('display', 'inline-block');
+					$('#countryText').focus();
+					$(".progress-bar").css("width", 9 + "%").text(9 + " %");
+					currentQuestion++;
+				}
+				else if(currentQuestion == 2 && $('#countryText').val().length > 0){
+					$('#question-3').css('display', 'none');
+					$('#question-3-answer').css('display', 'none');
+					$('#question-4-answer').css('display', 'inline-block');
+					$('#question-4').css('display', 'inline-block');
+					$(".progress-bar").css("width", 14 + "%").text(14 + " %");
+					currentQuestion++;
+				}
+				else if(currentQuestion == 3 && $('input:radio[name=english]:checked').length > 0){
+					$('#question-4').css('display', 'none');
+					$('#question-4-answer').css('display', 'none');
+					$('#question-5-answer').css('display', 'inline-block');
+					$('#question-5').css('display', 'inline-block');
+					$(".progress-bar").css("width", 18 + "%").text(18 + " %");
+					currentQuestion++;
+				}
+				else if(currentQuestion == 4 && $('input:radio[name=prevAnalysis]:checked').length > 0){
+					$('#question-5').css('display', 'none');
+					$('#question-5-answer').css('display', 'none');
+					$('#question-6-answer').css('display', 'inline-block');
+					$('#question-6').css('display', 'inline-block');
+					$(".progress-bar").css("width", 22 + "%").text(22 + " %");
+					currentQuestion++;
+				}
+				else if(currentQuestion == 5 && $('input:radio[name=diagnosed]:checked').length > 0){
+					$('#question-6').css('display', 'none');
+					$('#question-6-answer').css('display', 'none');
+					$('#question-7-answer').css('display', 'inline-block');
+					$('#question-7').css('display', 'inline-block');
+					$('#diagnosisText').focus();
+					$(".progress-bar").css("width", 27 + "%").text(27 + " %");
+					currentQuestion++;
+				}
+				else if(currentQuestion == 6 && $('#diagnosisText').val().length > 0){
+					$('#question-7').css('display', 'none');
+					$('#question-7-answer').css('display', 'none');
+					$('#question-8-answer').css('display', 'inline-block');
+					$('#question-8').css('display', 'inline-block');
+					$('#medicationText').focus();
+					$(".progress-bar").css("width", 32 + "%").text(32 + " %");
+					currentQuestion++;
+				}
+				else if(currentQuestion == 7 && $('#medicationText').val().length > 0){
+					$('#question-8').css('display', 'none');
+					$('#question-8-answer').css('display', 'none');
+					$('#question-9-answer').css('display', 'inline-block');
+					$('#question-9').css('display', 'inline-block');
+					$('#lastMedText').focus();
+					$(".progress-bar").css("width", 32 + "%").text(32 + " %");
+					currentQuestion++;
+				}
+				else if(currentQuestion == 8 && $('#lastMedText').val().length > 0){
+					$('#question-9').css('display', 'none');
+					$('#question-9-answer').css('display', 'none');
+					$('#question-10-answer').css('display', 'inline-block');
+					$('#question-10').css('display', 'inline-block');
+					$(".progress-bar").css("width", 32 + "%").text(32 + " %");
+					currentQuestion++;
+				}
+				else if(currentQuestion == 9 && $('input:radio[name=relationship]:checked').length > 0){
+					$('#question-10').css('display', 'none');
+					$('#question-10-answer').css('display', 'none');
+					$('#question-11-answer').css('display', 'inline-block');
+					$('#question-11').css('display', 'inline-block');
+					$(".progress-bar").css("width", 36 + "%").text(36 + " %");
+					currentQuestion++;
+				}
+				else if(currentQuestion == 10 && $('input:radio[name=degree]:checked').length > 0){
+					$('#question-11').css('display', 'none');
+					$('#question-11-answer').css('display', 'none');
+					$('#question-12-answer').css('display', 'inline-block');
+					$('#question-12').css('display', 'inline-block');
+					$(".progress-bar").css("width", 41 + "%").text(41 + " %");
+					currentQuestion++;
+				}
+				else if(currentQuestion == 11 && $('input:radio[name=income]:checked').length > 0){
+					$('#question-12').css('display', 'none');
+					$('#question-12-answer').css('display', 'none');
+					$('#question-13-answer').css('display', 'inline-block');
+					$('#question-13').css('display', 'inline-block');
+					$(".progress-bar").css("width", 45 + "%").text(45 + " %");
+					currentQuestion++;
+				}
+				else if(currentQuestion == 12 && $('input:radio[name=ethnicity]:checked').length > 0){
+					$('#question-13').css('display', 'none');
+					$('#question-13-answer').css('display', 'none');
+					$('#question-14-answer').css('display', 'inline-block');
+					$('#question-14').css('display', 'inline-block');
+					$(".progress-bar").css("width", 50 + "%").text(50 + " %");
+					currentQuestion++;
+				}
+				else if(currentQuestion == 13 && ($('input:checkbox[name="race[]"]:checked').length > 0 || $('#otherText').val().length > 0)){
+					$('#question-14').css('display', 'none');
+					$('#header1').css('display', 'none');
+					$('#header2').css('display', 'inline-block');
+					$('#question-14-answer').css('display', 'none');
+					$('#question-15-answer').css('display', 'inline-block');
+					$('#question-15').css('display', 'inline-block');
+					$('#emailText').focus();
+					$(".progress-bar").css("width", 54 + "%").text(54 + " %");
+					currentQuestion++;
+				}
+				//check if valid email and then move on to next question
+				else if(currentQuestion == 14){
+					if($('#emailText').val().length > 0){
+					var re = /\S+@\S+\.\S+/;
+					if(re.test($('#emailText').val()) == true){
+						$('#question-15').css('display', 'none');
+						$('#question-15-answer').css('display', 'none');
+						$('#email-invalid').css('display', 'none');
+						$('#question-16-answer').css('display', 'inline-block');
+						$('#question-16').css('display', 'inline-block');
+						$(".progress-bar").css("width", 54 + "%").text(54 + " %");
+						currentQuestion++;
+					}
+					else{
+						$('#email-invalid').css('display', 'inline-block');
+					}
+					}
+					else{
+						$('#question-15').css('display', 'none');
+						$('#question-15-answer').css('display', 'none');
+						$('#email-invalid').css('display', 'none');
+						$('#question-16-answer').css('display', 'inline-block');
+						$('#question-16').css('display', 'inline-block');
+						$(".progress-bar").css("width", 54 + "%").text(54 + " %");
+						currentQuestion++;
+					}
+				}
+				else if(currentQuestion == 15 && $('input:radio[name=easyUse]:checked').length > 0){
+					$('#question-16').css('display', 'none');
+					$('#question-16-answer').css('display', 'none');
+					$('#question-17-answer').css('display', 'inline-block');
+					$('#question-17').css('display', 'inline-block');
+					$(".progress-bar").css("width", 59 + "%").text(59 + " %");
+					currentQuestion++;
+				}
+				else if(currentQuestion == 16 && $('input:radio[name=understandInstruct]:checked').length > 0){
+					$('#question-17').css('display', 'none');
+					$('#question-17-answer').css('display', 'none');
+					$('#question-18-answer').css('display', 'inline-block');
+					$('#question-18').css('display', 'inline-block');
+					$(".progress-bar").css("width", 63 + "%").text(63 + " %");
+					currentQuestion++;
+				}
+				else if(currentQuestion == 17 && $('input:radio[name=futureUse]:checked').length > 0){
+					$('#question-18').css('display', 'none');
+					$('#question-18-answer').css('display', 'none');
+					$('#question-19-answer').css('display', 'inline-block');
+					$('#question-19').css('display', 'inline-block');
+					$(".progress-bar").css("width", 68 + "%").text(68 + " %");
+					currentQuestion++;
+				}
+				else if(currentQuestion == 18 && $('input:radio[name=noProblems]:checked').length > 0){
+					$('#question-19').css('display', 'none');
+					$('#question-19-answer').css('display', 'none');
+					$('#question-20-answer').css('display', 'inline-block');
+					$('#question-20').css('display', 'inline-block');
+					$(".progress-bar").css("width", 72 + "%").text(72 + " %");
+					currentQuestion++;
+				}
+				else if(currentQuestion == 19 && $('input:radio[name=helpfulVideos]:checked').length > 0){
+					$('#question-20').css('display', 'none');
+					$('#question-20-answer').css('display', 'none');
+					$('#question-21-answer').css('display', 'inline-block');
+					$('#question-21').css('display', 'inline-block');
+					$(".progress-bar").css("width", 77 + "%").text(77 + " %");
+					currentQuestion++;
+				}
+				else if(currentQuestion == 20 && $('input:radio[name=priorKnowledge]:checked').length > 0){
+					$('#question-21').css('display', 'none');
+					$('#question-21-answer').css('display', 'none');
+					$('#question-22-answer').css('display', 'inline-block');
+					$('#question-22').css('display', 'inline-block');
+					$('#likeText').focus();
+					$(".progress-bar").css("width", 81 + "%").text(81 + " %");
+					currentQuestion++;
+				}
+				else if(currentQuestion == 21){
+					$('#question-22').css('display', 'none');
+					$('#question-22-answer').css('display', 'none');
+					$('#question-23-answer').css('display', 'inline-block');
+					$('#question-23').css('display', 'inline-block');
+					$('#dislikeText').focus();
+					$(".progress-bar").css("width", 86 + "%").text(86 + " %");
+					currentQuestion++;
+				}
+				else if(currentQuestion == 22){
+					$('#question-23').css('display', 'none');
+					$('#question-23-answer').css('display', 'none');
+					$('#question-24-answer').css('display', 'inline-block');
+					$('#question-24').css('display', 'inline-block');
+					$('#strengthText').focus();
+					$(".progress-bar").css("width", 91 + "%").text(91 + " %");
+					currentQuestion++;
+				}
+				else if(currentQuestion == 23){
+					$('#question-24').css('display', 'none');
+					$('#question-24-answer').css('display', 'none');
+					$('#question-25-answer').css('display', 'inline-block');
+					$('#question-25').css('display', 'inline-block');
+					$('#improveText').focus();
+					$(".progress-bar").css("width", 95 + "%").text(95 + " %");
+					currentQuestion++;
+				}
+				else if(currentQuestion == 24){
+					$('#question-25').css('display', 'none');
+					$('#question-25-answer').css('display', 'none');
+					$('#header2').css('display', 'none');
+					$('#end').css('display', 'inline-block');
+					$(".progress-bar").css("width", 100 + "%").text(100 + " %");
+					//$("#myform").submit();
+					currentQuestion++;
+				}
+				else if(currentQuestion == 25){
+					
+					$("#myform").submit();
+					currentQuestion++;
+				}
+			}
+			
+			//if left arrow is pressed
+			if(e.keyCode === 37){
+				e.preventDefault();
+				if(currentQuestion == 1){
+					$('#question-2-answer').css('display', 'none');
+					$('#question-2').css('display', 'none');
+					$('#question-1-answer').css('display', 'inline-block');
+					$('#question-1').css('display', 'inline-block');
+					$(".progress-bar").css("width", 0 + "%").text(0 + " %");
+					currentQuestion--;
+				}
+				else if(currentQuestion == 2){
+					$('#question-3-answer').css('display', 'none');
+					$('#question-3').css('display', 'none');
+					$('#question-2-answer').css('display', 'inline-block');
+					$('#question-2').css('display', 'inline-block');
+					$('#ageText').focus();
+					$(".progress-bar").css("width", 4 + "%").text(4 + " %");
+					currentQuestion--;
+				}
+				else if(currentQuestion == 3){
+					$('#question-4-answer').css('display', 'none');
+					$('#question-4').css('display', 'none');
+					$('#question-3-answer').css('display', 'inline-block');
+					$('#question-3').css('display', 'inline-block');
+					$('#countryText').focus();
+					$(".progress-bar").css("width", 9 + "%").text(9 + " %");
+					currentQuestion--;
+				}
+				else if(currentQuestion == 4){
+					$('#question-5-answer').css('display', 'none');
+					$('#question-5').css('display', 'none');
+					$('#question-4-answer').css('display', 'inline-block');
+					$('#question-4').css('display', 'inline-block');
+					$(".progress-bar").css("width", 14 + "%").text(14 + " %");
+					currentQuestion--;
+				}
+				else if(currentQuestion == 5){
+				$('#question-6-answer').css('display', 'none');
+					$('#question-6').css('display', 'none');
+					$('#question-5-answer').css('display', 'inline-block');
+					$('#question-5').css('display', 'inline-block');
+					$(".progress-bar").css("width", 18 + "%").text(18 + " %");
+					currentQuestion--;
+				}
+				else if(currentQuestion == 6){
+				$('#question-7-answer').css('display', 'none');
+					$('#question-7').css('display', 'none');
+					$('#question-6-answer').css('display', 'inline-block');
+					$('#question-6').css('display', 'inline-block');
+					$(".progress-bar").css("width", 22 + "%").text(22 + " %");
+					currentQuestion--;
+				}
+				else if(currentQuestion == 7){
+				$('#question-8-answer').css('display', 'none');
+					$('#question-8').css('display', 'none');
+					$('#question-7-answer').css('display', 'inline-block');
+					$('#question-7').css('display', 'inline-block');
+					$('#diagnosisText').focus();
+					$(".progress-bar").css("width", 27 + "%").text(27 + " %");
+					currentQuestion--;
+				}
+				else if(currentQuestion == 8){
+					$('#question-9-answer').css('display', 'none');
+					$('#question-9').css('display', 'none');
+					$('#question-8-answer').css('display', 'inline-block');
+					$('#question-8').css('display', 'inline-block');
+					$('#medicationText').focus();
+					$(".progress-bar").css("width", 32 + "%").text(32 + " %");
+					currentQuestion--;
+				}
+				else if(currentQuestion == 9){
+					$('#question-10-answer').css('display', 'none');
+					$('#question-10').css('display', 'none');
+					$('#question-9-answer').css('display', 'inline-block');
+					$('#question-9').css('display', 'inline-block');
+					$('#lastMedText').focus();
+					$(".progress-bar").css("width", 32 + "%").text(32 + " %");
+					currentQuestion--;
+				}
+				else if(currentQuestion == 10){
+					$('#question-11-answer').css('display', 'none');
+					$('#question-11').css('display', 'none');
+					$('#question-10-answer').css('display', 'inline-block');
+					$('#question-10').css('display', 'inline-block');
+					$(".progress-bar").css("width", 32 + "%").text(32 + " %");
+					currentQuestion--;
+				}
+				else if(currentQuestion == 11){
+				$('#question-12-answer').css('display', 'none');
+					$('#question-12').css('display', 'none');
+					$('#question-11-answer').css('display', 'inline-block');
+					$('#question-11').css('display', 'inline-block');
+					$(".progress-bar").css("width", 36 + "%").text(36 + " %");
+					currentQuestion--;
+				}
+				else if(currentQuestion == 12){
+				$('#question-13-answer').css('display', 'none');
+					$('#question-13').css('display', 'none');
+					$('#question-12-answer').css('display', 'inline-block');
+					$('#question-12').css('display', 'inline-block');
+					$(".progress-bar").css("width", 41 + "%").text(41 + " %");
+					currentQuestion--;
+				}
+				else if(currentQuestion == 13){
+				$('#question-14-answer').css('display', 'none');
+					$('#question-14').css('display', 'none');
+					$('#question-13-answer').css('display', 'inline-block');
+					$('#question-13').css('display', 'inline-block');
+					$(".progress-bar").css("width", 45 + "%").text(45 + " %");
+					currentQuestion--;
+				}
+				else if(currentQuestion == 14){
+					$('#question-15-answer').css('display', 'none');
+					$('#question-15').css('display', 'none');
+					$('#header1').css('display', 'inline-block');
+					$('#header2').css('display', 'none');
+					$('#question-14-answer').css('display', 'inline-block');
+					$('#question-14').css('display', 'inline-block');
+					$(".progress-bar").css("width", 50 + "%").text(50 + " %");
+					currentQuestion--;
+				}
+				else if(currentQuestion == 15){
+					$('#question-16-answer').css('display', 'none');
+					$('#question-16').css('display', 'none');
+					$('#question-15-answer').css('display', 'inline-block');
+					$('#question-15').css('display', 'inline-block');
+					$('#emailText').focus();
+					$(".progress-bar").css("width", 54 + "%").text(54 + " %");
+					currentQuestion--;
+				}
+				else if(currentQuestion == 16){
+					$('#question-17-answer').css('display', 'none');
+					$('#question-17').css('display', 'none');
+					$('#question-16-answer').css('display', 'inline-block');
+					$('#question-16').css('display', 'inline-block');
+					$(".progress-bar").css("width", 54 + "%").text(54 + " %");
+					currentQuestion--;
+				}
+				else if(currentQuestion == 17){
+					$('#question-18-answer').css('display', 'none');
+					$('#question-18').css('display', 'none');
+					$('#question-17-answer').css('display', 'inline-block');
+					$('#question-17').css('display', 'inline-block');
+					$(".progress-bar").css("width", 59 + "%").text(59 + " %");
+					currentQuestion--;
+				}
+				else if(currentQuestion == 18){
+					$('#question-19-answer').css('display', 'none');
+					$('#question-19').css('display', 'none');
+					$('#question-18-answer').css('display', 'inline-block');
+					$('#question-18').css('display', 'inline-block');
+					$(".progress-bar").css("width", 63 + "%").text(63 + " %");
+					currentQuestion--;
+				}
+				else if(currentQuestion == 19){
+				$('#question-20-answer').css('display', 'none');
+					$('#question-20').css('display', 'none');
+					$('#question-19-answer').css('display', 'inline-block');
+					$('#question-19').css('display', 'inline-block');
+					$(".progress-bar").css("width", 68 + "%").text(68 + " %");
+					currentQuestion--;
+				}
+				else if(currentQuestion == 20){
+				$('#question-21-answer').css('display', 'none');
+					$('#question-21').css('display', 'none');
+					$('#question-20-answer').css('display', 'inline-block');
+					$('#question-20').css('display', 'inline-block');
+					$(".progress-bar").css("width", 72 + "%").text(72 + " %");
+					currentQuestion--;
+				}
+				else if(currentQuestion == 21){
+					$('#question-22-answer').css('display', 'none');
+					$('#question-22').css('display', 'none');
+					$('#question-21-answer').css('display', 'inline-block');
+					$('#question-21').css('display', 'inline-block');
+					$(".progress-bar").css("width", 77 + "%").text(77 + " %");
+					currentQuestion--;
+				}
+				else if(currentQuestion == 22){
+					$('#question-23-answer').css('display', 'none');
+					$('#question-23').css('display', 'none');
+					$('#question-22-answer').css('display', 'inline-block');
+					$('#question-22').css('display', 'inline-block');
+					$('#likeText').focus();
+					$(".progress-bar").css("width", 81 + "%").text(81 + " %");
+					currentQuestion--;
+				}
+				else if(currentQuestion == 23){
+					$('#question-24-answer').css('display', 'none');
+					$('#question-24').css('display', 'none');
+					$('#question-23-answer').css('display', 'inline-block');
+					$('#question-23').css('display', 'inline-block');
+					$('#dislikeText').focus();
+					$(".progress-bar").css("width", 86 + "%").text(86 + " %");
+					currentQuestion--;
+				}
+				else if(currentQuestion == 24){
+					$('#question-25-answer').css('display', 'none');
+					$('#question-25').css('display', 'none');
+					$('#question-24-answer').css('display', 'inline-block');
+					$('#question-24').css('display', 'inline-block');
+					$('#strengthText').focus();
+					$(".progress-bar").css("width", 91 + "%").text(91 + " %");
+					currentQuestion--;
+				}
+				else if(currentQuestion == 25){
+					$('#question-25-answer').css('display', 'inline-block');
+					$('#question-25').css('display', 'inline-block');
+					$('#improveText').focus();
+					$('#end').css('display', 'none');
+					$('#header2').css('display', 'inline-block');
+					$(".progress-bar").css("width", 95 + "%").text(95 + " %");
+					currentQuestion--;
+				}
+			}
+		};
+		
+	});
+	
+	</script>
+	
+	<script>
+  function startDictation() {
+
+    if (window.hasOwnProperty('webkitSpeechRecognition')) {
+
+      var recognition = new webkitSpeechRecognition();
+
+      recognition.continuous = false;
+      recognition.interimResults = false;
+
+      recognition.lang = "en-US";
+      recognition.start();
+
+      recognition.onresult = function(e) {
+		if(currentQuestion == 21){
+			document.getElementById('likeText').value = e.results[0][0].transcript;
+		}
+		else if(currentQuestion == 22){
+			document.getElementById('dislikeText').value = e.results[0][0].transcript;
+		}
+		else if(currentQuestion == 23){
+			document.getElementById('strengthText').value = e.results[0][0].transcript;
+		}
+		else if(currentQuestion == 24){
+			document.getElementById('improveText').value = e.results[0][0].transcript;
+		}
+        recognition.stop();
+      };
+
+      recognition.onerror = function(e) {
+        recognition.stop();
+      }
+
+    }
+  }
+	</script>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PARK</title>
+    <meta name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Codeply">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/animate.min.css" />
+    <link rel="stylesheet" href="./css/ionicons.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    
+  </head>
+  <body>
+    <nav id="topNav" class="navbar navbar-default-novid navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-collapse collapse" id="bs-navbar">
+                <ul class="nav navbar-nav">
+                	<li>
+                		<a id="navtext-main" class="navbar-brand-novid page-scroll" href="https://www.machinteraction.com/parkinsons/index.html">PARK</a>
+                	</li>
+                    <li>
+                        <a id="navtext" class="page-scroll" href="#footer">Contact</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a id="navtext" class="page-scroll" href="https://www.machinteraction.com/parkinsons/info.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header id="first">
+    <section>
+        <div class="container">
+            <div class="row">
+            	<div class="col-md-8 col-md-offset-2 text-faded">
+					<div id="tasks">
+						<div id="tasks-container">
+							<div id="task-1-container">
+								<div id="t1">
+									<h2><span style="font-weight:bold;">Introduction<span></h2>
+									<p style="margin-top:40px"></p>
+									<h3>This study consists of 7 tasks. It should take about 15 minutes.</h3>
+									<p>During the tasks, remain seated still and make sure there is <span style="font-weight:bold;">no background noise or motion.</span> 
+									</p>
+									<p style="margin-top:40px"></p>
+								</div>
+							
+							</div>
+						</div>
+						
+						<button id="next_button" class="btn yes-btn btn-xl" onclick="nextTask()">Setup Webcam</button>
+						
+					</div><!--tasks-->
+					<p style="margin-top:250px"></p>
+                	<a href="#footer" class="btn btn-primary-second btn-xl page-scroll">Get in Touch <i class="ion-android-arrow-down"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    </header>
+
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="row">
+               
+                <div class="col-xs-6 col-sm-3 column">
+                    <h4>About</h4>
+                    <ul class="list-unstyled">
+                        <li>Contact Us</li>
+                        <li><a href="mailto:parktoolhelp@gmail.com">parktoolhelp@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3 column">
+                    <h4>Stay Posted for Future Updates</h4>
+                    <iframe name="inv" style="display:none;"></iframe>
+                    <form id="subscribe-form" action="submit_email_updates.php" method="post" target="inv">
+                        <div class="form-group">
+                          <input type="text" id="email-text" name="email" class="form-control" placeholder="Tell us your email">
+                        </div>
+                    </form>
+                    <p id="email-invalid" style="color:red; display:none;">Error: invalid email</p>
+                    <div class="form-group">
+                          <button class="btn btn-default" onclick="submitEmailUpdates()" type="button">Subscribe for updates</button>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3 text-right" style="margin-left:200px;margin-top:10px;">
+                    <ul class="list-inline">
+                      <li><a rel="nofollow" href="https://www.machinteraction.com/parkinsons/info.html"><img width="150" src="./img/rochci.png"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <br/>
+        </div>
+    </footer>
+    <div id="alertModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+        	<div class="modal-body">
+        		<h2 class="text-center">Thank you!</h2>
+        		<p class="text-center">Your email has been recorded.</p>
+        		<p class="text-center">For future updates on this project, you will be notified.</p>
+        		
+        		<br/>
+        		<button class="btn btn-primary-second btn-lg center-block" data-dismiss="modal" aria-hidden="true">OK <i class="ion-android-close"></i></button>
+        	</div>
+        </div>
+        </div>
+    </div>
+    <!--scripts loaded here -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.easing.min.js"></script>
+    <script src="./js/wow.js"></script>
+    <script src="./js/scripts.js"></script>
+    
+    <script>
+	function submitEmailUpdates(){
+		if($('#email-text').val().length > 0){
+			var re = /\S+@\S+\.\S+/;
+			if(re.test($('#email-text').val()) == true){
+				$('#email-invalid').css('display', 'none');
+				$('#subscribe-form').submit();
+				$('#alertModal').modal('show');
+				$('#email-text').val('');
+			}
+			else{
+				$('#email-invalid').css('display', 'inline-block');
+			}
+		}
+	}
+    </script>
+    
+    <script>
+		var nxt = document.getElementById("next_button");
+		function nextTask(){
+    		jQuery(function($) {
+				window.location.href = "prepare.html";
+
+  			});
+		}
+		window.onkeydown = function(e){
+			if(e.keyCode === 32){
+				e.preventDefault();
+				nxt.click();
+			}
+		};
+	</script>
+    <script>
+        var chromeMediaSource = 'screen';
+        window.addEventListener('message', function(message) {
+            if(message.origin != 'https://www.webrtc-experiment.com') return;
+            chromeMediaSource = 'desktop';
+            if(typeof getScreenId == 'function' && !!message.data.sourceId) {
+                getScreenId(chromeMediaSource, message.data.sourceId);
+            }
+        });
+    </script>
+    
+
+  </body>
+</html>
