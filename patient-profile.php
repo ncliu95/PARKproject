@@ -68,11 +68,32 @@ $DBcon->close();
     		</div>
 		</div>
 		<div class="row">
-			<div class="col-md-6">
-				<img src="./img/patientgraph1placeholder.png" class="img-responsive">
+			<?php 
+				$user_id = $_SESSION['ptUserSession'];
+				$dir1 = "./img/".$user_id."/fist/";
+				$dir2 = "./img/".$user_id."/fingertip/";
+				$dir3 = "./img/".$user_id."/prosup/";
+
+				$recent1 = scandir($dir1, 1);
+				$recent2 = scandir($dir2, 1);
+				$recent3 = scandir($dir3, 1);
+
+				$path1 = $dir1 . $recent1[0];
+				$path2 = $dir2 . $recent2[0];
+				$path3 = $dir3 . $recent3[0];
+				
+				echo "<script>console.log( 'Path1: " . $path1 . "' );</script>";
+				echo "<script>console.log( 'Path1: " . $path2 . "' );</script>";
+				echo "<script>console.log( 'Path1: " . $path3 . "' );</script>";
+			?>
+			<div class="col-md-offset-1 col-md-3">
+				<img src="<?php echo $path1; ?>" class="img-responsive">
 			</div>
-			<div class="col-md-6">
-				<img src="./img/patientgraph2placeholder.png" class="img-responsive">
+			<div class="col-md-offset-1 col-md-3">
+				<img src="<?php echo $path2; ?>" class="img-responsive">
+			</div>
+			<div class="col-md-ofset-1 col-md-3">
+				<img src="<?php echo $path3; ?>" class="img-responsive">
 			</div>
 		</div>
 		<br><br><br>
@@ -81,7 +102,7 @@ $DBcon->close();
     			<button type="button" class="btn btn-warning btn-xl">COMPLETE HISTORY</button>
     		</div>
     		<div class = "col-md-3">
-    			<button type="button" class="btn btn-success btn-xl">TAKE NEW MEASUREMENT</button>
+    			<button type="button" class="btn btn-success btn-xl" onclick="location.href='https://www.machinteraction.com/parkinsons/index.html';">TAKE NEW MEASUREMENT</button>
     		</div>
     	</div>
     	<br><br><br>
