@@ -2,7 +2,7 @@
 
 	 $DBhost = "localhost";
 	 $DBuser = "root";
-	 $DBpass = "Akatenshi6";
+	 $DBpass = "mysql";
 	 $DBname = "park_accounts";
 	 
 	 $DBcon = new MySQLi($DBhost,$DBuser,$DBpass,$DBname);
