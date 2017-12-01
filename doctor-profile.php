@@ -236,6 +236,10 @@ $DBcon->close();
 			<h2>Recent Preformance</h2>
 			<img src="./img/1/fingertip/20181130.jpg" class="img-responsive">
 			<h3>SEVERITY SCORE: 0</h3>
+			<img src="./img/1/fist/placehold.jpg" class="img-responsive">
+			<h3>SEVERITY SCORE: 2</h3>
+			<img src="./img/1/prosup/placehold.jpg" class="img-responsive">
+			<h3>SEVERITY SCORE: 1</h3>
 			<br>
 			<button type="button" class="btn btn-warning btn-lg">COMPLETE HISTORY</button>
 

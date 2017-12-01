@@ -92,12 +92,20 @@ $DBcon->close();
 			<div class="col-md-offset-1 col-md-3">
 				<img src="<?php echo $path2; ?>" class="img-responsive">
 			</div>
-			<div class="col-md-ofset-1 col-md-3">
+			<div class="col-md-offset-1 col-md-3">
 				<img src="<?php echo $path3; ?>" class="img-responsive">
 			</div>
 		</div>
-        <div class="col-md-offset-4 col-md-4" style="text-align: center;">
-            <h3><b>SEVERITY SCORE: 0</b></h3>
+        <div class="row">
+            <div class="col-md-offset-1 col-md-3" style="text-align: center;">
+                <h3><b>SEVERITY SCORE: 2</b></h3>
+            </div>
+            <div class="col-md-offset-1 col-md-3" style="text-align: center;">
+                <h3><b>SEVERITY SCORE: 0</b></h3>
+            </div>
+            <div class="col-md-offset-1 col-md-3" style="text-align: center;">
+                <h3><b>SEVERITY SCORE: 1</b></h3>
+            </div>
         </div>
 		<br><br><br>
 		<div class="row">
