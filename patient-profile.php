@@ -13,6 +13,10 @@ $query = $DBcon->query("SELECT * FROM patients WHERE user_id=".$_SESSION['ptUser
 $userRow=$query->fetch_array();
 $DBcon->close();
 
+//$command = escapeshellcmd('cd ../../Applications/AMPPS/www/PARKproject/ && sudo python test.py');
+$output = shell_exec('python test.py');
+echo '<script type="text/javascript">alert('.$output.');</script>';
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -86,33 +90,33 @@ $DBcon->close();
 				echo "<script>console.log( 'Path1: " . $path2 . "' );</script>";
 				echo "<script>console.log( 'Path1: " . $path3 . "' );</script>";
 			?>
-			<div class="col-md-offset-1 col-md-3">
+			<div class="col-md-4">
 				<img src="<?php echo $path1; ?>" class="img-responsive">
 			</div>
-			<div class="col-md-offset-1 col-md-3">
+			<div class="col-md-4">
 				<img src="<?php echo $path2; ?>" class="img-responsive">
 			</div>
-			<div class="col-md-offset-1 col-md-3">
+			<div class="col-md-4">
 				<img src="<?php echo $path3; ?>" class="img-responsive">
 			</div>
 		</div>
         <div class="row">
-            <div class="col-md-offset-1 col-md-3" style="text-align: center;">
+            <div class="col-md-4" style="text-align: center;">
                 <h3><b>SEVERITY SCORE: 2</b></h3>
             </div>
-            <div class="col-md-offset-1 col-md-3" style="text-align: center;">
+            <div class="col-md-4" style="text-align: center;">
                 <h3><b>SEVERITY SCORE: 0</b></h3>
             </div>
-            <div class="col-md-offset-1 col-md-3" style="text-align: center;">
+            <div class="col-md-4" style="text-align: center;">
                 <h3><b>SEVERITY SCORE: 1</b></h3>
             </div>
         </div>
 		<br><br><br>
 		<div class="row">
-			<div class = "col-md-3 col-md-offset-3">
+			<div class = "col-md-3 col-md-offset-2">
     			<button type="button" class="btn btn-warning btn-xl">COMPLETE HISTORY</button>
     		</div>
-    		<div class = "col-md-3">
+    		<div class = "col-md-3 col-md-offset-1">
     			<button type="button" class="btn btn-success btn-xl" onclick="location.href='./park/task1-prep.html';">TAKE NEW MEASUREMENT</button>
     		</div>
     	</div>
